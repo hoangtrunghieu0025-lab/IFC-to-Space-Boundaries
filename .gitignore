@@ -1,0 +1,12 @@
+out/*
+!out/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# file backup do trình soạn thảo tạo
+*~
+
+# file IFC thật tải về, giấy phép không rõ: chỉ dùng cục bộ, KHÔNG commit
+samples/corpus_real/
