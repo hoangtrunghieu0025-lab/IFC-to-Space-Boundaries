@@ -1,17 +1,17 @@
 ---
 id: TASK-002
-title: "[IN_PROGRESS][MAIN] Nghiên cứu hướng Graph / Topology để suy ra IfcSpace và sinh IfcRelSpaceBoundary"
+title: "[DONE][MAIN] Nghiên cứu hướng Graph / Topology để suy ra IfcSpace và sinh IfcRelSpaceBoundary"
 category: MAIN
 assignees: [claude-02, claude-01]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T23:13:34+07:00
-status: in_progress
+updated_at: 2026-11-10T23:15:41+07:00
+status: done
 priority: high
 depends_on: []
 ---
 
-# [IN_PROGRESS][MAIN] TASK-002 — Nghiên cứu hướng Graph / Topology để suy ra IfcSpace và sinh IfcRelSpaceBoundary
+# [DONE][MAIN] TASK-002 — Nghiên cứu hướng Graph / Topology để suy ra IfcSpace và sinh IfcRelSpaceBoundary
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -51,13 +51,13 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | **Kết luận** | Nên làm / làm mức cơ sở / chỉ tham khảo / loại — kèm **mức bằng chứng** (cao/trung bình/thấp) |
 
 ## Tiêu chí hoàn thành (acceptance)
-- [ ] Đủ các file đầu ra ở trên, đều nằm trong `research/03-space-and-boundary-algorithms/graph-topology/`; không sửa file ngoài thư mục này (trừ thêm dòng vào `research/sources.md`)
-- [ ] Mọi khẳng định kỹ thuật có nguồn (URL **đã mở kiểm tra**, ngày truy cập); thứ chỉ thấy qua snippet tìm kiếm hay chưa đọc toàn văn thì ghi "chưa xác minh"
-- [ ] `assessment.md` điền đủ mọi dòng của bảng tiêu chí đánh giá chung, có kết luận kèm mức bằng chứng
-- [ ] Mục "Chưa xác minh / việc còn lại" ở cuối mỗi file trung thực: không bịa tên chuẩn, class IFC, hàm thư viện (theo `CLAUDE.md`)
-- [ ] Phần việc có chạy thật (cài, chạy script) ghi lệnh và kết quả; chưa chạy thì ghi "chưa kiểm chứng"
-- [ ] Nguồn mới đã thêm vào `research/sources.md` (chỉ thêm dòng)
-- [ ] `python3 tasks/list.py` không có cảnh báo
+- [x] Đủ các file đầu ra ở trên, đều nằm trong `research/03-space-and-boundary-algorithms/graph-topology/`; không sửa file ngoài thư mục này (trừ thêm dòng vào `research/sources.md`)
+- [x] Mọi khẳng định kỹ thuật có nguồn (URL **đã mở kiểm tra**, ngày truy cập); thứ chỉ thấy qua snippet tìm kiếm hay chưa đọc toàn văn thì ghi "chưa xác minh"
+- [x] `assessment.md` điền đủ mọi dòng của bảng tiêu chí đánh giá chung, có kết luận kèm mức bằng chứng
+- [x] Mục "Chưa xác minh / việc còn lại" ở cuối mỗi file trung thực: không bịa tên chuẩn, class IFC, hàm thư viện (theo `CLAUDE.md`)
+- [x] Phần việc có chạy thật (cài, chạy script) ghi lệnh và kết quả; chưa chạy thì ghi "chưa kiểm chứng"
+- [x] Nguồn mới đã thêm vào `research/sources.md` (chỉ thêm dòng)
+- [x] `python3 tasks/list.py` không có cảnh báo
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/03-space-and-boundary-algorithms/graph-topology/`, `research/sources.md` (chỉ thêm dòng) và file task này. Không sửa `research/03-space-and-boundary-algorithms/approach-critique.md`; nếu phát hiện cần sửa, ghi vào mục "Blocker / câu hỏi mở" của task.
@@ -71,8 +71,8 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| claude-02 | in_progress | 2026-11-10T22:50:36+07:00 | Đã viết 5 file; build IFC2SB xong, chạy thử thành công trên ac20-fzk-haus; còn phân tích kết quả |
-| claude-01 | in_review | 2026-11-10T16:45:10+07:00 | Đã kiểm lại phần bim2sim theo Fichter 2021 + Richter 2022 + mã; sửa `bim2sim-analysis.md`, bổ sung `ifc2sb-analysis.md` |
+| claude-02 | done | 2026-11-10T23:15:41+07:00 | Người dùng duyệt DONE; bỏ phân tích 7→4/2b và chạy trên Digital Hub |
+| claude-01 | done | 2026-11-10T16:45:10+07:00 | Đã kiểm lại phần bim2sim theo Fichter 2021 + Richter 2022 + mã; sửa `bim2sim-analysis.md`, bổ sung `ifc2sb-analysis.md` |
 
 ## Nhật ký — claude-02
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
@@ -83,6 +83,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | 2026-11-10T22:36:02+07:00 | in_progress | Xác minh định nghĩa 2a/2b bằng NISTIR 7687 (2a: bên kia là space; 2b: bên kia là phần tử vật lý). Sửa ghi chú trong `bim2sim-analysis.md`: mô tả 2b của bim2sim chưa đối chiếu với định nghĩa này. Thêm nguồn vào `research/sources.md`. Trang IFC4.3 chính thức trả 403: chưa xác minh trực tiếp. |
 | 2026-11-10T22:50:36+07:00 | in_progress | **Setup môi trường IFC2SB hoàn thành.** Build Docker 4 giai đoạn (`~/ifc2sb-docker`, ngoài repo): (1) base Ubuntu 20.04, (2) OCCT 7.5.3, (3) IfcOpenShell v0.6.0, (4) IFC2SB. Giai đoạn 4 phải thêm `qt5-default` và `libcgal-dev` (README không liệt kê đủ). Tải thành công 9 IFC hạng 1–9 tầng M/L (sha256 khớp manifest). Chạy thử `IFC2SB -j4 --graph` trên `samples/small/ac20-fzk-haus.ifc`: thành công, ~25 s; đầu ra `IfcSpace` 7→4, `IfcRelSpaceBoundary` 81→1095 (1st 131, 2a 480, 2b 484, 480 có `CorrespondingBoundary`) đếm bằng IfcOpenShell. Chưa phân tích nguyên nhân space giảm 7→4 và số 2b lớn: chưa kiểm chứng. |
 | 2026-11-10T23:13:34+07:00 | in_progress | Đọc poster Golla (Tulsa) do người dùng tải tay: "critical failure" là về **cài đặt** IFC2SB (thiếu Qt5/OCCT/IfcOpenShell/JSON/OpenCOLLADA, lỗi C++ chưa giải quyết), không phải sai kết quả trên Digital Hub. Sửa `ifc2sb-analysis.md` (dòng rủi ro, mục build/chạy thử, nguồn [S4]); thêm nguồn vào `sources.md`. Mình đã tái lập lỗi thiếu Qt5, thêm CGAL, rồi build thành công. |
+| 2026-11-10T23:15:41+07:00 | done | Người dùng quyết định **bỏ** phân tích nguyên nhân `IfcSpace` 7→4, số 2b và chạy IFC2SB trên RWTH Digital Hub, rồi yêu cầu hoàn thành. Tick 7 tiêu chí; sửa đoạn lỗi thời 'build chưa xong' ở `ifc2sb-analysis.md`. Còn ghi rõ là chưa xác minh: [S5] OSArch/Topologic chỉ thấy qua tìm kiếm; van Treeck & Rank 2007 chưa mở; `approach-critique.md` chưa cập nhật (ngoài quyền ghi, chờ người dùng). |
 
 ## Nhật ký — claude-01
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
