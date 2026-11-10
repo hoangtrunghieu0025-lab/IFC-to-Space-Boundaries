@@ -5,7 +5,7 @@ category: MAIN
 assignees: [claude-02, claude-01]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T22:36:02+07:00
+updated_at: 2026-11-10T22:50:36+07:00
 status: in_progress
 priority: high
 depends_on: []
@@ -71,7 +71,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| claude-02 | in_progress | 2026-11-10T12:25:55+07:00 | Đã viết 5 file; còn chờ build IFC2SB (luận án Fichter đã bỏ theo quyết định của người dùng) |
+| claude-02 | in_progress | 2026-11-10T22:50:36+07:00 | Đã viết 5 file; build IFC2SB xong, chạy thử thành công trên ac20-fzk-haus; còn phân tích kết quả |
 | claude-01 | in_review | 2026-11-10T16:45:10+07:00 | Đã kiểm lại phần bim2sim theo Fichter 2021 + Richter 2022 + mã; sửa `bim2sim-analysis.md`, bổ sung `ifc2sb-analysis.md` |
 
 ## Nhật ký — claude-02
@@ -81,6 +81,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | 2026-11-10T12:14:01+07:00 | in_progress | Nhận việc, bắt đầu xác minh IFC2SB (README, luận án, mã) |
 | 2026-11-10T12:25:55+07:00 | in_progress | Đã viết `survey.md`, `ifc2sb-analysis.md`, `bim2sim-analysis.md`, `graph-design-sketch.md`, `assessment.md` trong `research/03-space-and-boundary-algorithms/graph-topology/`. Kết luận chính: IFC2SB có dùng graph (đồ thị kề mặt 3D sau General Fuse, space = thành phần liên thông); bim2sim chỉ đọc boundary; Topologic chưa đủ bằng chứng. Đã đọc toàn văn bài IBPSA 2021 và mã IFC2SB/bim2sim/SketchArch. Lệnh: `git clone` 3 repo (scratchpad), `pdftotext` bài IBPSA, `docker build` (nền, chưa xong). |
 | 2026-11-10T22:36:02+07:00 | in_progress | Xác minh định nghĩa 2a/2b bằng NISTIR 7687 (2a: bên kia là space; 2b: bên kia là phần tử vật lý). Sửa ghi chú trong `bim2sim-analysis.md`: mô tả 2b của bim2sim chưa đối chiếu với định nghĩa này. Thêm nguồn vào `research/sources.md`. Trang IFC4.3 chính thức trả 403: chưa xác minh trực tiếp. |
+| 2026-11-10T22:50:36+07:00 | in_progress | **Setup môi trường IFC2SB hoàn thành.** Build Docker 4 giai đoạn (`~/ifc2sb-docker`, ngoài repo): (1) base Ubuntu 20.04, (2) OCCT 7.5.3, (3) IfcOpenShell v0.6.0, (4) IFC2SB. Giai đoạn 4 phải thêm `qt5-default` và `libcgal-dev` (README không liệt kê đủ). Tải thành công 9 IFC hạng 1–9 tầng M/L (sha256 khớp manifest). Chạy thử `IFC2SB -j4 --graph` trên `samples/small/ac20-fzk-haus.ifc`: thành công, ~25 s; đầu ra `IfcSpace` 7→4, `IfcRelSpaceBoundary` 81→1095 (1st 131, 2a 480, 2b 484, 480 có `CorrespondingBoundary`) đếm bằng IfcOpenShell. Chưa phân tích nguyên nhân space giảm 7→4 và số 2b lớn: chưa kiểm chứng. |
 
 ## Nhật ký — claude-01
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
