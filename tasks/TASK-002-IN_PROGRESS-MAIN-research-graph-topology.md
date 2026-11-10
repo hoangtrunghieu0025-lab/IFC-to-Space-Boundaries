@@ -5,7 +5,7 @@ category: MAIN
 assignees: [claude-02, claude-01]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T16:45:10+07:00
+updated_at: 2026-11-10T16:58:45+07:00
 status: in_progress
 priority: high
 depends_on: []
@@ -85,11 +85,12 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
 |---|---|---|
 | 2026-11-10T16:45:10+07:00 | in_review | Theo yêu cầu người dùng: mở mạng `publications.ibpsa.org`, đọc toàn văn Fichter 2021 và Richter 2022 (SimBuild); clone đầy đủ bim2sim (`270cd0a36f`, 5.987 commit) và IFC2SB (`96a89cd`); tái lập bộ lọc level `sb_creation.py:393-395` trên 14 IFC của TASK-001. **Sửa trực tiếp `bim2sim-analysis.md`**: (1) "chỉ đọc" → không sinh 1st/2a nhưng **có sinh 2b** từ hình `IfcSpace`, mặc định bật trong plugin EnergyPlus; (2) thêm bộ lọc level (5/14 file bị bỏ sạch boundary) và chỗ tài liệu (`Description`) không khớp mã (`Name`); (3) IFC2SB và bim2sim cùng dự án BIM2SIM, test bim2sim dùng file IFC2SB; (4) Discussion #498 đã xác minh, thêm ý curtain wall và lỗi đơn vị mm; (5) ground truth AC20-FZK-Haus có 62 pháp tuyến sai và 4 space hở (Richter 2022). **Bổ sung `ifc2sb-analysis.md` mục 8**: chưa có boundary ảo, chưa phân loại mặt tiếp đất, chỉ kiểm chứng 1 mô hình, không có số liệu hiệu năng. Kết quả này trước đó ghi tạm ở TASK-006 và `bim2sim-crosscheck.md`; theo yêu cầu người dùng đã gộp vào task này và xoá hai file đó. Chưa chạy bim2sim end-to-end: chưa kiểm chứng |
+| 2026-11-10T16:58:45+07:00 | in_review | Mở mạng `tuprints.ulb.tu-darmstadt.de` theo yêu cầu người dùng để đọc Richter et al. 2021. Trang trả về thử thách chống bot **Anubis** (proof-of-work JavaScript, nhắm vào AI scraper): **không vượt qua**. WebSearch không tìm thấy bản công khai khác → **BLOCKED**, cần người dùng tải tay |
 
 ## Blocker / câu hỏi mở
 - ~~**Luận án Fichter 2022**~~ — **Đã bỏ (người dùng quyết định 2026-11-10):** không cần tải hay đọc luận án; không còn là blocker. Kết luận về IFC2SB dựa trên bài IBPSA 2021 (đã đọc toàn văn) và mã nguồn.
 - **Build IFC2SB trong Docker** (Dockerfile ở scratchpad phiên) đang chạy nền, mới ở bước kéo ảnh Ubuntu 20.04 do mạng chậm; biên dịch OCCT 7.5.3 và IfcOpenShell 0.6.0 sẽ mất lâu. Chưa có kết quả chạy: ghi "chưa kiểm chứng".
 - Cần file IFC4 nhỏ có giấy phép rõ để chạy thử (chờ TASK-001, hoặc người dùng cung cấp).
 - `approach-critique.md` (ngoài quyền ghi) cần cập nhật mục 1 Hướng 2 theo kết quả mới: đề nghị người dùng quyết định.
-- (claude-01) Muốn đọc Richter et al. 2021 (thuật toán `sb_correction.py` của bim2sim) cần mở mạng `tuprints.ulb.tu-darmstadt.de`.
+- (claude-01) **Richter et al. 2021** (thuật toán `sb_correction.py` của bim2sim, https://tuprints.ulb.tu-darmstadt.de/21521/): đã mở mạng nhưng trang có thử thách chống bot Anubis, agent không vượt qua. **Nhờ người dùng tải PDF tay** (mở link bằng trình duyệt) và đặt vào `samples/corpus_real/` hoặc gửi lại, agent sẽ đọc tiếp.
 - (claude-01) Kết luận "bim2sim chỉ đọc boundary" trong nhật ký claude-02 (12:25:55) và trong `survey.md`/`assessment.md` nếu có nên đọc theo bản đã sửa của `bim2sim-analysis.md`.

@@ -88,7 +88,7 @@ Ghi chú liên quan đến hướng D trong `approach-critique.md`.
 
 ## Chưa xác minh / việc còn lại
 - **Chưa chạy bim2sim end-to-end** (cần conda + `pythonocc-core`); chưa biết nó chịu được IFC lớn không.
-- Chưa đọc Richter et al. 2021 (Forum Bauinformatik, https://tuprints.ulb.tu-darmstadt.de/21521/): bài mô tả thuật toán trong `sb_correction.py`. Cần mở mạng `tuprints.ulb.tu-darmstadt.de`.
+- Chưa đọc Richter et al. 2021 (Forum Bauinformatik, https://tuprints.ulb.tu-darmstadt.de/21521/): bài mô tả thuật toán trong `sb_correction.py`. Đã mở mạng (2026-11-10) nhưng trang có thử thách chống bot Anubis, không vượt qua; chưa thấy bản công khai khác. **BLOCKED**, cần tải tay.
 - Chưa đọc Jansen et al. 2021 (BIM2SIM, IBPSA BS2021, DOI 10.26868/25222708.2021.30228).
 - Đơn vị của ngưỡng 1e-2 trong `_compute_2b_bound_gaps`; nguồn gốc của "webtool".
 - Chưa kiểm tra plugin OpenFOAM dùng IFC2SB ở bước nào ngoài file test.
