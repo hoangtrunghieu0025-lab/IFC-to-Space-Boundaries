@@ -48,7 +48,7 @@ Các bước, kèm vị trí mã:
 
 Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluation results in an edge-face graph… To find first level SBs… the graph is traversed starting from a randomly selected face, collecting neighbor faces recursively… The search ends with a closed space if no more new faces are found." Kiểm tra sau: space không chồng nhau, pháp tuyến hướng vào trong, mỗi mặt phần tử chỉ dùng một lần. [S3]
 
-**Nguồn gốc ý tưởng**: van Treeck & Rank (2007), "Dimensional reduction of 3D building models using graph theory and its application in building energy simulation" (theo danh mục tham khảo của bài IBPSA; trong danh mục đó thông tin tạp chí ghi lẫn, chưa xác minh nơi đăng). Bài IBPSA chỉnh lại thành phương pháp **hoàn toàn dựa trên mặt**, không cần solid kín hay pháp tuyến đúng. [S3]
+**Nguồn gốc ý tưởng**: van Treeck & Rank (2007), "Dimensional reduction of 3D building models using graph theory and its application in building energy simulation" (danh mục của CBIP ghi: *Engineering with Computers* 23(2), 109–122, DOI 10.1007/s00366-006-0053-7. Danh mục của bài IBPSA ghi "Automation in Construction 76", đó là nơi đăng của chính bài CBIP nên có vẻ là nhầm; chưa mở bài gốc). Bài IBPSA chỉnh lại thành phương pháp **hoàn toàn dựa trên mặt**, không cần solid kín hay pháp tuyến đúng. [S3]
 
 ## 4. Xử lý lỗi và khe hở
 - Bài báo: khe hở ở vỏ hình học **tối đa "vài cm"** không ảnh hưởng thuật toán; khe nhỏ được đóng bằng kéo dài mặt ("face extension"); mặt "offset" vài cm để lấp khe trong và giữa phần tử. [S3]
