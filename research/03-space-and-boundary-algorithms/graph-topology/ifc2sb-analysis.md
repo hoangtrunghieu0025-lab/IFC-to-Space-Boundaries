@@ -66,7 +66,7 @@ Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluat
 - Dockerfile gốc (`add/Dockerfile`) dựa Ubuntu 20.04, OCC 7.5.3 lấy từ repo bên thứ ba `bimworld/occ`, `qt5-default`; **mình không dùng repo bên thứ ba** mà viết lại Dockerfile lấy OCCT 7.5.3 từ GitHub chính thức `Open-Cascade-SAS/OCCT` (tag `V7_5_3`) và IfcOpenShell tag `v0.6.0`, file ở thư mục scratchpad của phiên (`.../scratchpad/ifc2sb-docker/Dockerfile`).
 - Lệnh: `docker build -t ifc2sb-test .` (chạy nền). **Trạng thái tại thời điểm viết: chưa xong**; bước kéo ảnh nền Ubuntu 20.04 chỉ đạt khoảng 19/27 MB sau ~3 phút (mạng chậm), các bước biên dịch OCCT và IfcOpenShell chưa bắt đầu. **Chưa có kết quả cài đặt hay chạy: chưa kiểm chứng.**
 - Rủi ro đã biết: bài trình bày ở Univ. of Tulsa báo cài IFC2SB thất bại ("critical failure") trên mô hình RWTH Digital Hub; mình chưa tái lập được. [S4]
-- File IFC4 nhỏ để thử: `AC20-FZK-Haus.ifc` được Steptools liệt kê (2,5 MB, IFC4, nguồn KIT), nhưng **chưa tìm thấy URL chính thức của KIT cũng như giấy phép**; nếu dùng chỉ để cục bộ (`samples/corpus_real/`), không commit. Ưu tiên lấy từ kết quả TASK-001.
+- File IFC4 nhỏ để thử: `AC20-FZK-Haus.ifc` (2,5 MB, IFC4, nguồn KIT). [sửa bởi claude-01, 2026-11-10: TASK-001 đã tìm được nguồn chính thức (ifcwiki, KIT "for unrestricted use"); file ở `samples/small/ac20-fzk-haus.ifc`.]
 
 ## 7. Vì sao hợp / không hợp với dự án
 | Điểm | Đánh giá |
@@ -78,6 +78,15 @@ Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluat
 | Hình cong | Mã dùng `cfaceSetMap M_curved` riêng cho mặt cong ở bước mức 2 và bài báo nói "no restrictions on the curvature"; chưa có thử nghiệm |
 | Phụ thuộc cũ | IfcOpenShell 0.6.0 và OCC 7.5 (2020–2021), không bảo trì từ 01/2023; khó nâng cấp |
 | License | GPL-3.0 (hoặc LGPL; mâu thuẫn): nếu nhúng vào sản phẩm thì phải làm rõ |
+
+## 8. Bổ sung từ việc đọc lại bài IBPSA 2021 [S3] (claude-01, 2026-11-10)
+| Điểm | Bài [S3] | Ghi chú |
+|---|---|---|
+| Boundary ảo (virtual) | Phần kết luận nêu "support of virtual space boundaries" là việc **tương lai**. Zone cầu thang không khớp bản gốc vì "there are no virtual SBs" | Không gian thông nhau và hành lang mở của sân vận động cần boundary ảo, nên đây là **rủi ro lớn**. Mã có `--virtualbyspace` (mục 5), nhưng cần `IfcSpace` gốc |
+| Mặt tiếp đất | Việc phân loại boundary tiếp xúc đất chưa xong, vì thuật toán chưa xét `IfcSite` | Ảnh hưởng `InternalOrExternalBoundary` (EXTERNAL_EARTH) |
+| Kiểm chứng | Chỉ **1 mô hình**: KIT IFC4 "Phantasy office building" (= AC20-Institute-Var-2 trên ifcwiki). Kết quả: 1 `IfcExternalSpatialElement`, 78 `IfcSpace`, "almost 2000" boundary. Khớp số và vị trí zone, trừ cầu thang. **Không có số liệu thời gian chạy hay bộ nhớ** | Bản gốc đo ở TASK-001 có 82 `IfcSpace` và 1000 RSB (chỉ 2a, không có 2b). Bằng chứng cho quy mô lớn = **thấp** |
+| Quan hệ với bim2sim | Lời cảm ơn ghi dự án BIM2SIM (03ET1562A); phần BEPS chạy qua toolchain BIM2SIM | Xem `bim2sim-analysis.md` mục 3 |
+| File test AC20-FZK-Haus | — | Nay đã có nguồn chính thức: KIT IFC Examples https://www.ifcwiki.org/index.php?title=KIT_IFC_Examples, ghi "for unrestricted use". File nằm ở `samples/small/ac20-fzk-haus.ifc` (TASK-001). Lưu ý: theo Richter et al. 2022, boundary gốc của file này có 62 pháp tuyến quay vào trong và 4 space không kín (xem `bim2sim-analysis.md` mục 6) |
 
 ## Chưa xác minh / việc còn lại
 - Luận án Fichter 2022 (chi tiết graph, thử nghiệm, hiệu năng): **BLOCKED** vì trang RWTH có thử thách JavaScript chống bot. Nhờ người dùng tải PDF từ https://publications.rwth-aachen.de/record/856693 và đặt vào `samples/corpus_real/` hoặc thư mục cục bộ, rồi agent đọc tiếp.

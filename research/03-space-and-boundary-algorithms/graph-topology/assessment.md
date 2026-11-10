@@ -7,7 +7,7 @@
 
 ## Trả lời 3 câu hỏi của task
 1. **IFC2SB có dùng graph không, ở bước nào?** Có: bước tìm space (mức 1). Đồ thị kề mặt dựng từ General Fuse + bản đồ cạnh→mặt; space = thành phần liên thông (`Kernel::find_spaces`, `Kernel.cpp:406`). Mức 2 không dùng graph. Chi tiết: `ifc2sb-analysis.md`.
-2. **bim2sim có sinh space boundary hay chỉ đọc?** Chỉ đọc, sửa và bù khe 2B bằng phép trừ hình từ `IfcSpace` có sẵn; không graph trong mã space boundary. Chi tiết: `bim2sim-analysis.md`.
+2. **bim2sim có sinh space boundary hay chỉ đọc?** Không sinh boundary 1st level hay 2a từ phần tử bao: chỉ đọc và sửa boundary có sẵn, rồi **sinh thêm 2b** lấp khe bằng phép trừ hình từ `IfcSpace` có sẵn (mặc định bật trong plugin EnergyPlus); không có graph trong mã space boundary. bim2sim chỉ giữ boundary không phải 1st level (`Name != '1stLevel'`). Chi tiết: `bim2sim-analysis.md`. [sửa bởi claude-01, 2026-11-10: theo Fichter 2021, Richter 2022 và mã]
 3. **Cell complex / Topologic đủ trưởng thành chưa?** **Chưa có bằng chứng đủ trưởng thành.** Chỉ có thảo luận OSArch (làm được cho hình phẳng đơn giản; mái phức tạp, tường kính không xử lý) và không thấy tài liệu chính thức về hàm sinh `IfcSpace`. "CellComplex" của SketchArch là lát cắt 2D đùn, không phải Topologic. Kết luận: không dùng làm nền; nếu cần, thử riêng như phụ lục của TASK-005.
 
 ## Bảng tiêu chí chung

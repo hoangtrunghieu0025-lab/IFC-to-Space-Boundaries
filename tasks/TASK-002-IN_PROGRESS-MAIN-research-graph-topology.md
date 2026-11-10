@@ -2,10 +2,10 @@
 id: TASK-002
 title: "[IN_PROGRESS][MAIN] Nghiên cứu hướng Graph / Topology để suy ra IfcSpace và sinh IfcRelSpaceBoundary"
 category: MAIN
-assignees: [claude-02]
+assignees: [claude-02, claude-01]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T12:25:55+07:00
+updated_at: 2026-11-10T16:45:10+07:00
 status: in_progress
 priority: high
 depends_on: []
@@ -62,6 +62,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/03-space-and-boundary-algorithms/graph-topology/`, `research/sources.md` (chỉ thêm dòng) và file task này. Không sửa `research/03-space-and-boundary-algorithms/approach-critique.md`; nếu phát hiện cần sửa, ghi vào mục "Blocker / câu hỏi mở" của task.
 - **claude-02**: toàn bộ.
+- **claude-01**: kiểm lại phần bim2sim/IFC2SB theo bài Fichter 2021 (yêu cầu người dùng, 2026-11-10); sửa trực tiếp `bim2sim-analysis.md`, bổ sung mục 8 của `ifc2sb-analysis.md`.
 
 ---
 
@@ -71,6 +72,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
 | claude-02 | in_progress | 2026-11-10T12:25:55+07:00 | Đã viết 5 file; còn chờ build IFC2SB và luận án (BLOCKED tải tay) |
+| claude-01 | in_review | 2026-11-10T16:45:10+07:00 | Đã kiểm lại phần bim2sim theo Fichter 2021 + Richter 2022 + mã; sửa `bim2sim-analysis.md`, bổ sung `ifc2sb-analysis.md` |
 
 ## Nhật ký — claude-02
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
@@ -79,9 +81,15 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | 2026-11-10T12:14:01+07:00 | in_progress | Nhận việc, bắt đầu xác minh IFC2SB (README, luận án, mã) |
 | 2026-11-10T12:25:55+07:00 | in_progress | Đã viết `survey.md`, `ifc2sb-analysis.md`, `bim2sim-analysis.md`, `graph-design-sketch.md`, `assessment.md` trong `research/03-space-and-boundary-algorithms/graph-topology/`. Kết luận chính: IFC2SB có dùng graph (đồ thị kề mặt 3D sau General Fuse, space = thành phần liên thông); bim2sim chỉ đọc boundary; Topologic chưa đủ bằng chứng. Đã đọc toàn văn bài IBPSA 2021 và mã IFC2SB/bim2sim/SketchArch. Lệnh: `git clone` 3 repo (scratchpad), `pdftotext` bài IBPSA, `docker build` (nền, chưa xong). |
 
+## Nhật ký — claude-01
+| Thời điểm (GMT+7) | Trạng thái | Nội dung |
+|---|---|---|
+| 2026-11-10T16:45:10+07:00 | in_review | Theo yêu cầu người dùng: mở mạng `publications.ibpsa.org`, đọc toàn văn Fichter 2021 và Richter 2022 (SimBuild); clone đầy đủ bim2sim (`270cd0a36f`, 5.987 commit) và IFC2SB (`96a89cd`); tái lập bộ lọc level `sb_creation.py:393-395` trên 14 IFC của TASK-001. **Sửa trực tiếp `bim2sim-analysis.md`**: (1) "chỉ đọc" → không sinh 1st/2a nhưng **có sinh 2b** từ hình `IfcSpace`, mặc định bật trong plugin EnergyPlus; (2) thêm bộ lọc level (5/14 file bị bỏ sạch boundary) và chỗ tài liệu (`Description`) không khớp mã (`Name`); (3) IFC2SB và bim2sim cùng dự án BIM2SIM, test bim2sim dùng file IFC2SB; (4) Discussion #498 đã xác minh, thêm ý curtain wall và lỗi đơn vị mm; (5) ground truth AC20-FZK-Haus có 62 pháp tuyến sai và 4 space hở (Richter 2022). **Bổ sung `ifc2sb-analysis.md` mục 8**: chưa có boundary ảo, chưa phân loại mặt tiếp đất, chỉ kiểm chứng 1 mô hình, không có số liệu hiệu năng. Kết quả này trước đó ghi tạm ở TASK-006 và `bim2sim-crosscheck.md`; theo yêu cầu người dùng đã gộp vào task này và xoá hai file đó. Chưa chạy bim2sim end-to-end: chưa kiểm chứng |
+
 ## Blocker / câu hỏi mở
 - **Luận án Fichter 2022**: trang RWTH (https://publications.rwth-aachen.de/record/856693) chặn tải tự động bằng thử thách JavaScript chống bot; agent không vượt qua. **Nhờ người dùng tải PDF tay** rồi đặt vào thư mục cục bộ (ví dụ `samples/corpus_real/`).
 - **Build IFC2SB trong Docker** (Dockerfile ở scratchpad phiên) đang chạy nền, mới ở bước kéo ảnh Ubuntu 20.04 do mạng chậm; biên dịch OCCT 7.5.3 và IfcOpenShell 0.6.0 sẽ mất lâu. Chưa có kết quả chạy: ghi "chưa kiểm chứng".
 - Cần file IFC4 nhỏ có giấy phép rõ để chạy thử (chờ TASK-001, hoặc người dùng cung cấp).
 - `approach-critique.md` (ngoài quyền ghi) cần cập nhật mục 1 Hướng 2 theo kết quả mới: đề nghị người dùng quyết định.
-
+- (claude-01) Muốn đọc Richter et al. 2021 (thuật toán `sb_correction.py` của bim2sim) cần mở mạng `tuprints.ulb.tu-darmstadt.de`.
+- (claude-01) Kết luận "bim2sim chỉ đọc boundary" trong nhật ký claude-02 (12:25:55) và trong `survey.md`/`assessment.md` nếu có nên đọc theo bản đã sửa của `bim2sim-analysis.md`.
