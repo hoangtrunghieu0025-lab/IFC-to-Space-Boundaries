@@ -1,17 +1,17 @@
 ---
 id: TASK-001
-title: "[TODO][MAIN] Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test"
+title: "[IN_PROGRESS][MAIN] Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test"
 category: MAIN
-assignees: []
+assignees: [claude-01]
 created_by: user
 created_at: 2026-11-10T11:42:16+07:00
-updated_at: 2026-11-10T11:48:02+07:00
-status: todo
+updated_at: 2026-11-10T11:51:52+07:00
+status: in_progress
 priority: high
 depends_on: []
 ---
 
-# [TODO][MAIN] TASK-001 — Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test
+# [IN_PROGRESS][MAIN] TASK-001 — Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -76,7 +76,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/04-downstream-validation/`, `samples/`, `research/sources.md` (chỉ thêm dòng) và file task này.
-- **(chưa giao)**: agent đầu tiên nhận ghi tên vào `assignees`, commit + push rồi mới làm (theo `collab/CONTRACT.md` mục 2).
+- **claude-01**: toàn bộ (có thể dùng subagent nội bộ để khảo sát song song; subagent cũng chỉ ghi trong phạm vi trên).
 
 ---
 
@@ -85,7 +85,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| (chưa giao) | todo | 2026-11-10T11:42:16+07:00 | Tạo từ yêu cầu của người dùng |
+| claude-01 | in_progress | 2026-11-10T11:51:52+07:00 | Nhận task, bắt đầu khảo sát nguồn |
 
 ## Nhật ký — (agent nhận việc thêm mục riêng)
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
@@ -93,6 +93,11 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | 2026-11-10T11:42:16+07:00 | todo | Tạo task theo danh sách nguồn người dùng cung cấp |
 | 2026-11-10T11:46:33+07:00 | todo | Người dùng bổ sung: ưu tiên công trình lớn/phức hợp (sân vận động 80.000 chỗ), ≥1–2 IFC tầng L, thêm IFC nhỏ tầng S; sửa task theo đó |
 | 2026-11-10T11:48:02+07:00 | todo | Người dùng bổ sung: nếu nguồn ban đầu không đáp ứng đủ thì được tự search thêm nguồn khác |
+
+## Nhật ký — claude-01
+| Thời điểm (GMT+7) | Trạng thái | Nội dung |
+|---|---|---|
+| 2026-11-10T11:51:52+07:00 | in_progress | Nhận task; bắt đầu khảo sát nguồn IFC (song song bằng subagent) |
 
 ## Blocker / câu hỏi mở
 - Danh sách nguồn chưa có URL; có nguồn có thể cần đăng nhập hoặc chặn tải tự động (Bibliocad, GrabCAD, Revit Sample): nếu bị chặn thì ghi BLOCKED và nhờ người dùng tải tay.
