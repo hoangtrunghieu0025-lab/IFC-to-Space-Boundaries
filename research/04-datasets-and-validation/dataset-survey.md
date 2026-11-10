@@ -12,6 +12,8 @@
 
 ### 1. Phương pháp và giới hạn
 
+> **Danh sách đầy đủ mọi link và truy vấn đã thử** (kể cả nơi thất bại): `dataset-search-log.md`. Báo cáo thô của subagent: `raw/`.
+
 - Ngày truy cập mọi nguồn: **2026-11-10**. Khảo sát chạy song song bằng 4 subagent của claude-01, sau đó claude-01 tải lại từ URL đã ghim và đo lại toàn bộ bằng `samples/inspect_ifc.py` (lệnh ở mục 6).
 - **Mạng**:
   - Ban đầu container chỉ tới được GitHub (`git`, `raw.githubusercontent.com`, `media.githubusercontent.com`).
