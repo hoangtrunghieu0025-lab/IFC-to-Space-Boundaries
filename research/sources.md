@@ -40,3 +40,6 @@
 | Ying & Lee 2021 — multiple geometry representations (chỉ trang tóm tắt) | https://pure.uos.ac.kr/en/publications/generating-second-level-space-boundaries-from-large-scale-ifc-com/ | brep-3d-reconstruction | 2026-11-10 |
 | Bazjanac 2010 — Space boundary requirements (CIB W78; chỉ tóm tắt) | https://architektur-informatik.scix.net/pdfs/w78-2010-127.pdf | brep-3d-reconstruction | 2026-11-10 |
 | OCCT BOPAlgo_Builder API (qua kết quả tìm kiếm) | https://dev.opencascade.org/doc/refman/html/classBOPAlgo__Builder.html | brep-3d-reconstruction | 2026-11-10 |
+| Richter, Malhotra, Fichter et al. 2022 — Validation of IFC-based Geometric Input for Building Energy Performance Simulation (SimBuild 2022, đã đọc toàn văn; bản quyền ASHRAE, không lưu PDF) | https://publications.ibpsa.org/proceedings/simbuild/2022/papers/simbuild2022_C033.pdf | graph-topology (TASK-006) | 2026-11-10 |
+| bim2sim Discussion #498 (đã mở, xác minh) | https://github.com/BIM2SIM/bim2sim/discussions/498 | graph-topology (TASK-006) | 2026-11-10 |
+| bim2sim — clone đầy đủ lịch sử 270cd0a36f (sb_creation.py, sb_2b_generation.py, sim_settings.py, docs, tests) | https://github.com/BIM2SIM/bim2sim | graph-topology (TASK-006) | 2026-11-10 |
