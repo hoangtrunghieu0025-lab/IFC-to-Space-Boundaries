@@ -26,6 +26,8 @@
 | Giá trị mặc định | `BaseSimSettings`: `add_space_boundaries`, `correct_space_boundaries`, `close_space_boundary_gaps` đều `False` (`sim_settings.py:447-462`). `BuildingSimSettings`: `add_space_boundaries=True` (dòng 945). Plugin EnergyPlus: `correct_space_boundaries=True`, `close_space_boundary_gaps=True` (`PluginEnergyPlus/bim2sim_energyplus/sim_settings.py:180-189`) | **Với EnergyPlus, mặc định cả ba bước đều chạy, kể cả sinh 2b** |
 
 Lịch sử commit: không có thuật toán sinh boundary 1st level hay 2a trong bim2sim.
+
+> [sửa bởi claude-02, 2026-11-10: bổ sung định nghĩa 2a/2b có nguồn] Theo NISTIR 7687 (mục thuật ngữ 2LSB, trang 2; chú thích 1 trang 84): 2a = phía bên kia của boundary là một **space**; 2b = phía bên kia **không có space mà là một phần tử vật lý** (còn gọi 3rd level). Mô tả `AddSpaceBoundaries2B` ở trên (phần mặt `IfcSpace` còn lại sau khi trừ các boundary sát nó, dùng để lấp khe) **chưa được đối chiếu** với định nghĩa này: chưa kiểm phần dư đó có đúng là 2b theo NIST hay chỉ là cách bim2sim gọi tên. Chưa kiểm chứng. Nguồn: https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7687.pdf (đã tải và đọc đoạn trích, 2026-11-10).
 - Đã kiểm `git log --grep` (116 commit nhắc "space boundar"). Các commit có chữ "space boundary generation" (ví dụ `a6de19b32`, 2021-02-22) nói về việc **khởi tạo đối tượng Python** từ `IfcRelSpaceBoundary`, không phải sinh hình học.
 - Lớp `SpaceBoundaryRepresentation` dành cho "webtool generated space boundaries" (dạng `IfcBuildingElementProxy` tên `ProxyBound`) đã bị xoá ở commit `65b01fb17` (2025-05-12). Nguồn gốc của webtool này **chưa xác minh**.
 

@@ -5,7 +5,7 @@ category: MAIN
 assignees: [claude-02, claude-01]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T16:58:45+07:00
+updated_at: 2026-11-10T22:36:02+07:00
 status: in_progress
 priority: high
 depends_on: []
@@ -80,6 +80,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | 2026-11-10T12:11:25+07:00 | todo | Tạo task từ `research/03-space-and-boundary-algorithms/approach-critique.md` |
 | 2026-11-10T12:14:01+07:00 | in_progress | Nhận việc, bắt đầu xác minh IFC2SB (README, luận án, mã) |
 | 2026-11-10T12:25:55+07:00 | in_progress | Đã viết `survey.md`, `ifc2sb-analysis.md`, `bim2sim-analysis.md`, `graph-design-sketch.md`, `assessment.md` trong `research/03-space-and-boundary-algorithms/graph-topology/`. Kết luận chính: IFC2SB có dùng graph (đồ thị kề mặt 3D sau General Fuse, space = thành phần liên thông); bim2sim chỉ đọc boundary; Topologic chưa đủ bằng chứng. Đã đọc toàn văn bài IBPSA 2021 và mã IFC2SB/bim2sim/SketchArch. Lệnh: `git clone` 3 repo (scratchpad), `pdftotext` bài IBPSA, `docker build` (nền, chưa xong). |
+| 2026-11-10T22:36:02+07:00 | in_progress | Xác minh định nghĩa 2a/2b bằng NISTIR 7687 (2a: bên kia là space; 2b: bên kia là phần tử vật lý). Sửa ghi chú trong `bim2sim-analysis.md`: mô tả 2b của bim2sim chưa đối chiếu với định nghĩa này. Thêm nguồn vào `research/sources.md`. Trang IFC4.3 chính thức trả 403: chưa xác minh trực tiếp. |
 
 ## Nhật ký — claude-01
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
