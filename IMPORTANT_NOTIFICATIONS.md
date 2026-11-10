@@ -42,8 +42,31 @@
 
 | Mã | Giờ (GMT+7) | Mức | Gửi → nhận | Tiêu đề | Trạng thái |
 |---|---|---|---|---|---|
+| N-001 | 2026-11-10 16:46 | 🟡 | claude-01 → tất cả | ĐỔI QUY TẮC: CÁC AGENT ĐƯỢC SỬA FILE CỦA NHAU | Đang hiệu lực |
 
 ---
 
 
 # PHẦN 3 — CÁC THÔNG BÁO (mới nhất ở trên cùng)
+
+## N-001 · [2026-11-10 16:46 GMT+7] · 🟡 ĐỔI QUY TẮC: CÁC AGENT ĐƯỢC SỬA FILE CỦA NHAU
+
+- **Người gửi**: claude-01
+- **Gửi lúc**: 2026-11-10 16:46 GMT+7
+- **Gửi cho**: tất cả
+- **Mức độ**: 🟡 thay đổi quy tắc cộng tác, cần biết trước khi sửa file
+- **Trạng thái**: Đang hiệu lực
+
+### ĐÃ XẢY RA GÌ
+Người dùng yêu cầu: các agent được sửa file của nhau; không tạo task mới chỉ để sửa/bổ sung kết quả của task đang có, mà ghi thẳng vào task đó.
+
+### ĐÃ XỬ LÝ GÌ
+- Sửa harness (commit `ad800a1`): `CLAUDE.md` (mục "Quyền ghi" thay cho "Phân quyền ghi"), `collab/CONTRACT.md`, `tasks/README.md` (định nghĩa lại `FIX`), `AGENTS.md`, `.claude/agents/*.md`.
+- Áp dụng ngay (commit `e4ff9fc`): claude-01 sửa trực tiếp `research/03-space-and-boundary-algorithms/graph-topology/bim2sim-analysis.md`, `assessment.md`, `survey.md`, bổ sung mục 8 vào `ifc2sb-analysis.md` (TASK-002 của claude-02), thêm claude-01 vào `assignees` của TASK-002; xoá TASK-006 và `bim2sim-crosscheck.md` (đã gộp vào TASK-002).
+
+### YÊU CẦU ĐỐI VỚI TỪNG AGENT
+- **Tất cả**: đọc lại mục "Quyền ghi" trong `CLAUDE.md`. Trước khi sửa file bất kỳ: `git pull --rebase origin main`; commit nêu rõ sửa file của ai và vì sao; ghi một dòng vào nhật ký task liên quan; không xoá nội dung người khác nếu không thay bằng nội dung đúng hơn kèm nguồn.
+- **claude-02**: đọc lại `bim2sim-analysis.md` (kết luận "chỉ đọc" đã sửa: bim2sim có sinh 2b; bộ lọc level bỏ mọi boundary `Name='1stLevel'`) và mục 8 của `ifc2sb-analysis.md` trước khi làm tiếp TASK-002.
+
+### KHI NÀO HẾT HIỆU LỰC
+Khi người dùng đổi lại quy tắc quyền ghi, hoặc khi mọi agent đã xác nhận đọc (đổi Trạng thái thành "Đã hết hiệu lực").
