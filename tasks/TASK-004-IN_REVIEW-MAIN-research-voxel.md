@@ -1,17 +1,17 @@
 ---
 id: TASK-004
-title: "[TODO][MAIN] Nghiên cứu hướng voxel hoá để suy ra IfcSpace và sinh IfcRelSpaceBoundary"
+title: "[IN_REVIEW][MAIN] Nghiên cứu hướng voxel hoá để suy ra IfcSpace và sinh IfcRelSpaceBoundary"
 category: MAIN
-assignees: []
+assignees: [claude-02]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T12:11:25+07:00
-status: todo
+updated_at: 2026-11-10T16:27:32+07:00
+status: in_review
 priority: normal
 depends_on: []
 ---
 
-# [TODO][MAIN] TASK-004 — Nghiên cứu hướng voxel hoá để suy ra IfcSpace và sinh IfcRelSpaceBoundary
+# [IN_REVIEW][MAIN] TASK-004 — Nghiên cứu hướng voxel hoá để suy ra IfcSpace và sinh IfcRelSpaceBoundary
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -61,7 +61,7 @@ Nhiệm vụ đặc thù: trả lời (1) voxel suy ra được `IfcSpace` hay c
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/03-space-and-boundary-algorithms/voxel/`, `research/sources.md` (chỉ thêm dòng) và file task này. Không sửa `research/03-space-and-boundary-algorithms/approach-critique.md`; nếu phát hiện cần sửa, ghi vào mục "Blocker / câu hỏi mở" của task.
-- **(chưa giao)**: agent đầu tiên nhận ghi tên vào `assignees`, commit + push rồi mới làm (theo `collab/CONTRACT.md` mục 2).
+- **claude-02**: toàn bộ.
 
 ---
 
@@ -70,12 +70,16 @@ Nhiệm vụ đặc thù: trả lời (1) voxel suy ra được `IfcSpace` hay c
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| (chưa giao) | todo | 2026-11-10T12:11:25+07:00 | Tạo từ phản biện các hướng tiếp cận |
+| claude-02 | in_review | 2026-11-10T16:27:32+07:00 | PARTIAL: 5 file + prototype; chưa chạy toolkit chính thức, chưa đọc toàn văn VOX2BIM+ |
 
-## Nhật ký — (agent nhận việc thêm mục riêng)
+## Nhật ký — claude-02
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
 |---|---|---|
 | 2026-11-10T12:11:25+07:00 | todo | Tạo task từ `research/03-space-and-boundary-algorithms/approach-critique.md` |
+| 2026-11-10T15:58:24+07:00 | in_progress | Nhận việc (làm trong lúc chờ build IFC2SB của TASK-002) |
+| 2026-11-10T16:27:32+07:00 | in_review | Báo cáo **PARTIAL**. File: `research/03-space-and-boundary-algorithms/voxel/{survey,voxel-method-analysis,memory-estimate,assessment}.md`, `prototype/{voxel_infer.py,README.md,results/,results_nofill/}`. Đã đọc toàn văn Krijnen 2021. Lệnh: `python voxel_infer.py samples/small/*.ifc --h {0.5,0.2,0.1}` (venv: ifcopenshell 0.9.0.post1, numpy 2.5.4, scipy tuỳ chọn). Kết quả (6 IFC nhỏ, 63 IfcSpace): khớp IoU thể tích ≥ 0,5: 47/63 ở h = 0,1; 45/63 ở 0,2; 2/63 ở 0,5; ước lượng bộ nhớ sân vận động trong `memory-estimate.md` (giả định hộp 300×250×60 m, chưa đo). Kết luận: chỉ tham khảo/hỗ trợ, mức bằng chứng trung bình. Phát hiện: bài báo chỉ voxel hoá IfcSpace có sẵn, suy ra space bằng voxel là hướng tương lai. |
 
 ## Blocker / câu hỏi mở
--
+- **Voxelization toolkit** (`opensourceBIM/voxelization_toolkit`): lần clone đầu thất bại (nông, repo rỗng sau timeout); chưa thử lại và chưa chạy; chức năng `segment`/`volume2` chưa kiểm chứng.
+- **VOX2BIM+** (Springer): trang tạp chí chuyển hướng sang đăng nhập; agent không đi tiếp; chỉ có tóm tắt. Nhờ người dùng cung cấp PDF nếu có.
+- Chưa thử mô hình M/L (chưa tải về máy); kích thước sân vận động trong ước tính là giả định.

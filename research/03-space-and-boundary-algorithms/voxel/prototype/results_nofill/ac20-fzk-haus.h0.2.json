@@ -1,0 +1,26 @@
+{
+ "file": "samples/small/ac20-fzk-haus.ifc",
+ "h": 0.2,
+ "close": 0,
+ "min_vol": 1.0,
+ "n_elements": 82,
+ "n_sample_points": 3450323,
+ "grid_dims": [
+  71,
+  61,
+  38
+ ],
+ "n_cells": 164578,
+ "grid_mem_MB_bool": 0.16,
+ "n_occupied_before_close": 31608,
+ "n_ifcspace": 7,
+ "n_ifcspace_volume_sum": 470.82,
+ "n_enclosed_components": 8,
+ "enclosed_volume_sum": 401.05,
+ "ifcspace_centroid_in_enclosed": 7,
+ "ifcspace_centroid_in_exterior_or_solid": 0,
+ "components_containing_more_than_one_ifcspace": 1,
+ "components_without_ifcspace": 4,
+ "time_geometry_s": 6.4,
+ "time_voxel_s": 1.61
+}

@@ -1,0 +1,29 @@
+{
+ "file": "samples/small/bsi-ifc4-building-architecture.ifc",
+ "dz": 1.0,
+ "min_area": 1.0,
+ "close": 0.05,
+ "unit_scale": 0.001,
+ "n_elements": 12,
+ "n_ifcspace_total": 2,
+ "time_geometry_s": 0.43,
+ "storeys": [
+  {
+   "storey": "00 groundfloor",
+   "z_cut_m": 1.0,
+   "n_elements_cut": 5,
+   "n_rooms_found": 0,
+   "rooms_area_sum_m2": 0,
+   "n_ifcspace_in_storey": 2,
+   "n_ifcspace_cut_by_plane": 2,
+   "ifcspace_area_sum_m2": 24.58,
+   "matched_iou_ge_0.5": 0,
+   "best_iou_per_ifcspace": [
+    0.0,
+    0.0
+   ],
+   "rooms_without_ifcspace": 0
+  }
+ ],
+ "time_slice_s": 0.01
+}

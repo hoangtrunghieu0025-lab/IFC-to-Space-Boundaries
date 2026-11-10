@@ -1,0 +1,26 @@
+{
+ "file": "samples/small/pilot-project-2.ifc",
+ "h": 0.5,
+ "close": 0,
+ "min_vol": 1.0,
+ "n_elements": 53,
+ "n_sample_points": 228866,
+ "grid_dims": [
+  24,
+  22,
+  28
+ ],
+ "n_cells": 14784,
+ "grid_mem_MB_bool": 0.01,
+ "n_occupied_before_close": 3437,
+ "n_ifcspace": 11,
+ "n_ifcspace_volume_sum": 343.89,
+ "n_enclosed_components": 13,
+ "enclosed_volume_sum": 233.62,
+ "ifcspace_centroid_in_enclosed": 11,
+ "ifcspace_centroid_in_exterior_or_solid": 0,
+ "components_containing_more_than_one_ifcspace": 0,
+ "components_without_ifcspace": 2,
+ "time_geometry_s": 0.9,
+ "time_voxel_s": 0.07
+}

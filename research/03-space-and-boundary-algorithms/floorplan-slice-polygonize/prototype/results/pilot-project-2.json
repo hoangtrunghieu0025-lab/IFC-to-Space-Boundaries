@@ -1,0 +1,79 @@
+{
+ "file": "samples/small/pilot-project-2.ifc",
+ "dz": 1.0,
+ "min_area": 1.0,
+ "close": 0.0,
+ "unit_scale": 0.001,
+ "n_elements": 53,
+ "n_ifcspace_total": 11,
+ "time_geometry_s": 0.79,
+ "storeys": [
+  {
+   "storey": "Level 1",
+   "z_cut_m": 1.0,
+   "n_elements_cut": 16,
+   "n_rooms_found": 5,
+   "rooms_area_sum_m2": 64.78,
+   "n_ifcspace_in_storey": 5,
+   "n_ifcspace_cut_by_plane": 5,
+   "ifcspace_area_sum_m2": 63.47,
+   "matched_iou_ge_0.5": 5,
+   "best_iou_per_ifcspace": [
+    0.979,
+    0.982,
+    0.982,
+    0.979,
+    0.975
+   ],
+   "rooms_without_ifcspace": 0
+  },
+  {
+   "storey": "Level 2",
+   "z_cut_m": 4.0,
+   "n_elements_cut": 15,
+   "n_rooms_found": 4,
+   "rooms_area_sum_m2": 38.0,
+   "n_ifcspace_in_storey": 3,
+   "n_ifcspace_cut_by_plane": 3,
+   "ifcspace_area_sum_m2": 34.4,
+   "matched_iou_ge_0.5": 3,
+   "best_iou_per_ifcspace": [
+    0.979,
+    0.979,
+    0.949
+   ],
+   "rooms_without_ifcspace": 1
+  },
+  {
+   "storey": "Level 3",
+   "z_cut_m": 7.0,
+   "n_elements_cut": 11,
+   "n_rooms_found": 3,
+   "rooms_area_sum_m2": 35.45,
+   "n_ifcspace_in_storey": 3,
+   "n_ifcspace_cut_by_plane": 3,
+   "ifcspace_area_sum_m2": 34.4,
+   "matched_iou_ge_0.5": 3,
+   "best_iou_per_ifcspace": [
+    0.979,
+    0.979,
+    0.949
+   ],
+   "rooms_without_ifcspace": 0
+  },
+  {
+   "storey": "Level 4",
+   "z_cut_m": 10.0,
+   "n_elements_cut": 4,
+   "n_rooms_found": 1,
+   "rooms_area_sum_m2": 9.55,
+   "n_ifcspace_in_storey": 0,
+   "n_ifcspace_cut_by_plane": 0,
+   "ifcspace_area_sum_m2": 0,
+   "matched_iou_ge_0.5": 0,
+   "best_iou_per_ifcspace": [],
+   "rooms_without_ifcspace": 1
+  }
+ ],
+ "time_slice_s": 0.07
+}

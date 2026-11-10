@@ -1,0 +1,32 @@
+{
+ "file": "samples/small/bsi-ifc4-building-architecture.ifc",
+ "h": 0.1,
+ "close": 0,
+ "min_vol": 1.0,
+ "n_elements": 9,
+ "n_sample_points": 720610,
+ "grid_dims": [
+  68,
+  72,
+  66
+ ],
+ "n_cells": 323136,
+ "grid_mem_MB_bool": 0.32,
+ "n_occupied_before_close": 155591,
+ "n_ifcspace": 2,
+ "n_ifcspace_volume_sum": 54.06,
+ "n_enclosed_components": 0,
+ "enclosed_volume_sum": 0,
+ "ifcspace_centroid_in_enclosed": 0,
+ "ifcspace_centroid_in_exterior_or_solid": 2,
+ "components_containing_more_than_one_ifcspace": 0,
+ "components_without_ifcspace": 0,
+ "matched_iou_ge_0.5": 0,
+ "mean_iou": 0.0,
+ "iou_per_ifcspace": [
+  0.0,
+  0.0
+ ],
+ "time_geometry_s": 0.16,
+ "time_voxel_s": 0.45
+}

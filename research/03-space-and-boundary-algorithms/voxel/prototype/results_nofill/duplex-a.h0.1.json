@@ -1,0 +1,26 @@
+{
+ "file": "samples/small/duplex-a.ifc",
+ "h": 0.1,
+ "close": 0,
+ "min_vol": 1.0,
+ "n_elements": 215,
+ "n_sample_points": 23484640,
+ "grid_dims": [
+  98,
+  271,
+  87
+ ],
+ "n_cells": 2310546,
+ "grid_mem_MB_bool": 2.31,
+ "n_occupied_before_close": 311839,
+ "n_ifcspace": 21,
+ "n_ifcspace_volume_sum": 1199.81,
+ "n_enclosed_components": 48,
+ "enclosed_volume_sum": 803.06,
+ "ifcspace_centroid_in_enclosed": 19,
+ "ifcspace_centroid_in_exterior_or_solid": 2,
+ "components_containing_more_than_one_ifcspace": 2,
+ "components_without_ifcspace": 36,
+ "time_geometry_s": 2.06,
+ "time_voxel_s": 3.72
+}

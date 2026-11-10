@@ -71,7 +71,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| claude-02 | in_progress | 2026-11-10T12:25:55+07:00 | Đã viết 5 file; còn chờ build IFC2SB và luận án (BLOCKED tải tay) |
+| claude-02 | in_progress | 2026-11-10T12:25:55+07:00 | Đã viết 5 file; còn chờ build IFC2SB (luận án Fichter đã bỏ theo quyết định của người dùng) |
 | claude-01 | in_review | 2026-11-10T16:45:10+07:00 | Đã kiểm lại phần bim2sim theo Fichter 2021 + Richter 2022 + mã; sửa `bim2sim-analysis.md`, bổ sung `ifc2sb-analysis.md` |
 
 ## Nhật ký — claude-02
@@ -87,7 +87,7 @@ Nhiệm vụ đặc thù: trả lời dứt khoát 3 câu hỏi: (1) IFC2SB có 
 | 2026-11-10T16:45:10+07:00 | in_review | Theo yêu cầu người dùng: mở mạng `publications.ibpsa.org`, đọc toàn văn Fichter 2021 và Richter 2022 (SimBuild); clone đầy đủ bim2sim (`270cd0a36f`, 5.987 commit) và IFC2SB (`96a89cd`); tái lập bộ lọc level `sb_creation.py:393-395` trên 14 IFC của TASK-001. **Sửa trực tiếp `bim2sim-analysis.md`**: (1) "chỉ đọc" → không sinh 1st/2a nhưng **có sinh 2b** từ hình `IfcSpace`, mặc định bật trong plugin EnergyPlus; (2) thêm bộ lọc level (5/14 file bị bỏ sạch boundary) và chỗ tài liệu (`Description`) không khớp mã (`Name`); (3) IFC2SB và bim2sim cùng dự án BIM2SIM, test bim2sim dùng file IFC2SB; (4) Discussion #498 đã xác minh, thêm ý curtain wall và lỗi đơn vị mm; (5) ground truth AC20-FZK-Haus có 62 pháp tuyến sai và 4 space hở (Richter 2022). **Bổ sung `ifc2sb-analysis.md` mục 8**: chưa có boundary ảo, chưa phân loại mặt tiếp đất, chỉ kiểm chứng 1 mô hình, không có số liệu hiệu năng. Kết quả này trước đó ghi tạm ở TASK-006 và `bim2sim-crosscheck.md`; theo yêu cầu người dùng đã gộp vào task này và xoá hai file đó. Chưa chạy bim2sim end-to-end: chưa kiểm chứng |
 
 ## Blocker / câu hỏi mở
-- **Luận án Fichter 2022**: trang RWTH (https://publications.rwth-aachen.de/record/856693) chặn tải tự động bằng thử thách JavaScript chống bot; agent không vượt qua. **Nhờ người dùng tải PDF tay** rồi đặt vào thư mục cục bộ (ví dụ `samples/corpus_real/`).
+- ~~**Luận án Fichter 2022**~~ — **Đã bỏ (người dùng quyết định 2026-11-10):** không cần tải hay đọc luận án; không còn là blocker. Kết luận về IFC2SB dựa trên bài IBPSA 2021 (đã đọc toàn văn) và mã nguồn.
 - **Build IFC2SB trong Docker** (Dockerfile ở scratchpad phiên) đang chạy nền, mới ở bước kéo ảnh Ubuntu 20.04 do mạng chậm; biên dịch OCCT 7.5.3 và IfcOpenShell 0.6.0 sẽ mất lâu. Chưa có kết quả chạy: ghi "chưa kiểm chứng".
 - Cần file IFC4 nhỏ có giấy phép rõ để chạy thử (chờ TASK-001, hoặc người dùng cung cấp).
 - `approach-critique.md` (ngoài quyền ghi) cần cập nhật mục 1 Hướng 2 theo kết quả mới: đề nghị người dùng quyết định.

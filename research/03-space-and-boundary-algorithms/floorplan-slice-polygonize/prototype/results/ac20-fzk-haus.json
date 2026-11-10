@@ -1,0 +1,48 @@
+{
+ "file": "samples/small/ac20-fzk-haus.ifc",
+ "dz": 1.0,
+ "min_area": 1.0,
+ "close": 0.0,
+ "unit_scale": 1.0,
+ "n_elements": 82,
+ "n_ifcspace_total": 7,
+ "time_geometry_s": 7.49,
+ "storeys": [
+  {
+   "storey": "Erdgeschoss",
+   "z_cut_m": 1.0,
+   "n_elements_cut": 24,
+   "n_rooms_found": 4,
+   "rooms_area_sum_m2": 104.08,
+   "n_ifcspace_in_storey": 6,
+   "n_ifcspace_cut_by_plane": 6,
+   "ifcspace_area_sum_m2": 101.39,
+   "matched_iou_ge_0.5": 3,
+   "best_iou_per_ifcspace": [
+    0.972,
+    0.972,
+    0.956,
+    0.473,
+    0.21,
+    0.297
+   ],
+   "rooms_without_ifcspace": 1
+  },
+  {
+   "storey": "Dachgeschoss",
+   "z_cut_m": 3.7,
+   "n_elements_cut": 48,
+   "n_rooms_found": 0,
+   "rooms_area_sum_m2": 0,
+   "n_ifcspace_in_storey": 1,
+   "n_ifcspace_cut_by_plane": 1,
+   "ifcspace_area_sum_m2": 94.26,
+   "matched_iou_ge_0.5": 0,
+   "best_iou_per_ifcspace": [
+    0.0
+   ],
+   "rooms_without_ifcspace": 0
+  }
+ ],
+ "time_slice_s": 0.31
+}

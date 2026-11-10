@@ -1,17 +1,17 @@
 ---
 id: TASK-005
-title: "[TODO][MAIN] Nghiên cứu hướng lát cắt mặt bằng theo tầng và polygonize để suy ra IfcSpace"
+title: "[IN_REVIEW][MAIN] Nghiên cứu hướng lát cắt mặt bằng theo tầng và polygonize để suy ra IfcSpace"
 category: MAIN
-assignees: []
+assignees: [claude-02]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T12:11:25+07:00
-status: todo
+updated_at: 2026-11-10T16:27:32+07:00
+status: in_review
 priority: normal
 depends_on: []
 ---
 
-# [TODO][MAIN] TASK-005 — Nghiên cứu hướng lát cắt mặt bằng theo tầng và polygonize để suy ra IfcSpace
+# [IN_REVIEW][MAIN] TASK-005 — Nghiên cứu hướng lát cắt mặt bằng theo tầng và polygonize để suy ra IfcSpace
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -61,7 +61,7 @@ Nhiệm vụ đặc thù: nêu rõ vai trò baseline: nó cần đạt IoU diệ
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/03-space-and-boundary-algorithms/floorplan-slice-polygonize/`, `research/sources.md` (chỉ thêm dòng) và file task này. Không sửa `research/03-space-and-boundary-algorithms/approach-critique.md`; nếu phát hiện cần sửa, ghi vào mục "Blocker / câu hỏi mở" của task.
-- **(chưa giao)**: agent đầu tiên nhận ghi tên vào `assignees`, commit + push rồi mới làm (theo `collab/CONTRACT.md` mục 2).
+- **claude-02**: toàn bộ.
 
 ---
 
@@ -70,12 +70,16 @@ Nhiệm vụ đặc thù: nêu rõ vai trò baseline: nó cần đạt IoU diệ
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| (chưa giao) | todo | 2026-11-10T12:11:25+07:00 | Tạo từ phản biện các hướng tiếp cận |
+| claude-02 | in_review | 2026-11-10T16:27:32+07:00 | PARTIAL: 5 file + prototype; chưa cài bước chiều cao/đùn, chưa điều tra các ca không khớp |
 
-## Nhật ký — (agent nhận việc thêm mục riêng)
+## Nhật ký — claude-02
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
 |---|---|---|
 | 2026-11-10T12:11:25+07:00 | todo | Tạo task từ `research/03-space-and-boundary-algorithms/approach-critique.md` |
+| 2026-11-10T15:58:24+07:00 | in_progress | Nhận việc (làm trong lúc chờ build IFC2SB của TASK-002) |
+| 2026-11-10T16:27:32+07:00 | in_review | Báo cáo **PARTIAL**. File: `research/03-space-and-boundary-algorithms/floorplan-slice-polygonize/{survey,method-analysis,limits,assessment}.md`, `prototype/{slice_polygonize.py,README.md,results/}`. Lệnh: `python slice_polygonize.py samples/small/*.ifc --dz 1.0 [--close 0.05]` (venv: ifcopenshell 0.9.0.post1, shapely 2.2.0, numpy 2.5.4). Kết quả (6 IFC nhỏ, 63 IfcSpace): 38/63 khớp IoU diện tích ≥ 0,5 ở z = 1 m trên cao độ tầng (`close = 0`); `--close 0.05` tăng FZK-Haus 3 → 4; cắt và polygonize ≤ 0,25 s mỗi file. Kết luận: làm mức cơ sở (baseline), mức bằng chứng trung bình. Đã đọc mã SketchArch `DetectRoom`. |
 
 ## Blocker / câu hỏi mở
--
+- Chưa điều tra nguyên nhân các ca không khớp (duplex-a, bsi-ifc4: 0 phòng).
+- Chưa cài bước chiều cao và đùn thành `IfcSpace`; chưa thử nhiều giá trị `dz`.
+- Bonsai, floorplan-parser, Cloud2BIM chỉ thấy qua kết quả tìm kiếm.

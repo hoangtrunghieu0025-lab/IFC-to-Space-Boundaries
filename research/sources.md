@@ -43,3 +43,9 @@
 | Richter, Malhotra, Fichter et al. 2022 — Validation of IFC-based Geometric Input for Building Energy Performance Simulation (SimBuild 2022, đã đọc toàn văn; bản quyền ASHRAE, không lưu PDF) | https://publications.ibpsa.org/proceedings/simbuild/2022/papers/simbuild2022_C033.pdf | graph-topology (TASK-002) | 2026-11-10 |
 | bim2sim Discussion #498 (đã mở, xác minh) | https://github.com/BIM2SIM/bim2sim/discussions/498 | graph-topology (TASK-002) | 2026-11-10 |
 | bim2sim — clone đầy đủ lịch sử 270cd0a36f (sb_creation.py, sb_2b_generation.py, sim_settings.py, docs, tests) | https://github.com/BIM2SIM/bim2sim | graph-topology (TASK-002) | 2026-11-10 |
+| Krijnen, El-Diraby, Konomi, Attalla 2021 — voxelized thermal analysis of IFC (CIB W78, đã đọc toàn văn) | https://eres.scix.net/pdfs/w78-2021-paper-044.pdf | voxel | 2026-11-10 |
+| opensourceBIM voxelization_toolkit (chỉ trang GitHub) | https://github.com/opensourceBIM/voxelization_toolkit | voxel | 2026-11-10 |
+| Martens & Blankenbach 2023 — VOX2BIM+ (chỉ tóm tắt) | https://link.springer.com/10.1007/s41064-023-00243-1 | voxel | 2026-11-10 |
+| Cloud2BIM (chỉ tóm tắt qua tìm kiếm) | https://arxiv.org/html/2503.11498v1 | voxel, floorplan-slice-polygonize | 2026-11-10 |
+| OSArch — Create ifcSpaces in BlenderBIM (qua tìm kiếm) | https://community.osarch.org/discussion/comment/15839/ | floorplan-slice-polygonize | 2026-11-10 |
+| floorplan-parser geometry.py (detect_rooms_from_walls; qua tìm kiếm) | https://huggingface.co/rikhoffbauer2/floorplan-parser/blob/main/floorplan/geometry.py | floorplan-slice-polygonize | 2026-11-10 |
