@@ -10,10 +10,16 @@ Mục tiêu dự án: xem `PRIMARY_OBJECTIVE.md`.
 - Mọi khẳng định kỹ thuật phải có nguồn (URL + ngày truy cập). Thêm nguồn vào `research/sources.md` (chỉ thêm dòng mới, không sửa dòng cũ).
 - Không bịa tên chuẩn, class/thuộc tính IFC, thuật ngữ MVD hay tên tham số thư viện. Không chắc thì ghi rõ "chưa xác minh".
 
-## Phân quyền ghi (tránh xung đột khi chạy song song)
-- Mỗi agent research CHỈ ghi vào thư mục được giao: `research/NN-<chủ đề>/`, hoặc thư mục con của nó nếu thư mục đó chia theo hướng tiếp cận (ví dụ `research/03-space-and-boundary-algorithms/voxel/`). Task chia nhiều hướng thì mỗi task chỉ ghi vào thư mục con của hướng mình; file tổng quan ở gốc thư mục (ví dụ `approach-critique.md`) chỉ sửa khi task yêu cầu. Được đọc thư mục khác.
-- Chỉ agent `synthesizer` được ghi vào `docs/`.
-- Không sửa `PRIMARY_OBJECTIVE.md`, `CLAUDE.md`, `.claude/` nếu không được yêu cầu.
+## Quyền ghi (các agent được sửa file của nhau)
+- Mỗi task có **thư mục đầu ra mặc định** (ví dụ `research/NN-<chủ đề>/` hoặc thư mục con theo hướng như `research/03-space-and-boundary-algorithms/voxel/`); viết kết quả mới của task vào đó. Được đọc mọi thư mục.
+- **Mọi agent được sửa file của agent khác** (research, `samples/`, `src/`, `reports/`, `docs/`, file task…) khi cần sửa sai, bổ sung bằng chứng hoặc gộp kết quả. Khi sửa:
+  - `git pull --rebase origin main` ngay trước khi sửa; commit nhỏ, push ngay;
+  - commit message nêu rõ sửa file của ai và vì sao, ví dụ `research(claude-01): fix bim2sim-analysis (TASK-002) per Fichter 2021`;
+  - ghi một dòng vào nhật ký của task liên quan (mục của mình); không xoá nhật ký của agent khác;
+  - không xoá nội dung của người khác nếu không thay bằng nội dung đúng hơn kèm nguồn; đoạn sửa lớn thì ghi chú `[sửa bởi claude-0x, YYYY-MM-DD: lý do]`.
+- **Sửa/bổ sung kết quả của một task thì ghi thẳng vào task đó** (thêm tên mình vào `assignees`), không tạo task mới chỉ để sửa.
+- `docs/` do agent `synthesizer` viết chính; agent khác được sửa theo các quy tắc trên.
+- Không sửa `PRIMARY_OBJECTIVE.md`, `CLAUDE.md`, `.claude/` nếu người dùng không yêu cầu.
 
 ## Đặt tên file
 - Theo chủ đề, chữ thường, gạch ngang: `ifc-spatial-structure.md`.

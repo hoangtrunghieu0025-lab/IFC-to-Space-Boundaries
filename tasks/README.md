@@ -23,7 +23,7 @@ Trạng thái và category xuất hiện ở **bốn chỗ**, luôn phải khớ
 | Category | Ý nghĩa | Ví dụ |
 |---|---|---|
 | `MAIN` | Việc nằm trên lộ trình chính để đạt `PRIMARY_OBJECTIVE.md` | nghiên cứu, spec, pipeline, kiểm tra bằng viewer IFC |
-| `FIX` | Sửa sai, xác minh lại, giải quyết vấn đề phát sinh từ task khác. Ghi rõ task gốc trong mục Mô tả | xác minh lại nghiên cứu (TASK-012) |
+| `FIX` | Vấn đề mới phát sinh **không thuộc task nào đang mở** (task gốc đã `done`/`cancelled`, hoặc lỗi chung). Ghi rõ task/vấn đề gốc trong mục Mô tả. Sửa/xác minh kết quả của task đang mở thì ghi thẳng vào task đó, không tạo FIX | lỗi phát hiện sau khi TASK-012 đã `done` |
 | `SIDE` | Việc phụ, **không chặn** task `MAIN` nào; làm khi rảnh | cài thêm công cụ GUI (TASK-013) |
 
 **Trạng thái** (viết hoa, phải **khớp đúng** trường `status` ở frontmatter): `TODO` · `IN_PROGRESS` · `IN_REVIEW` · `BLOCKED` · `DONE` · `CANCELLED`.
@@ -34,7 +34,7 @@ Trạng thái và category xuất hiện ở **bốn chỗ**, luôn phải khớ
 ## 2. Quy tắc làm việc
 1. **Nhận việc**: đầu phiên làm việc (sau Bước 0 trong `AGENTS.md`), chạy `python3 tasks/list.py`, lọc task có tên mình trong `assignees` và chưa `DONE`/`CANCELLED`. Task `FIX` ưu tiên hơn `MAIN` khi nó chặn task `MAIN`; `SIDE` làm sau cùng.
 2. **Phân công** (`assignees`): `[claude-01]`, `[claude-02, claude-03]`… (một hoặc nhiều agent). Task chia việc cho nhiều agent thì mỗi agent làm phần trong mục "Phạm vi từng agent".
-3. **Quyền sửa**: mọi agent có tên trong `assignees` được sửa file task. Để tránh xung đột git:
+3. **Quyền sửa**: mọi agent được sửa file task (xem "Quyền ghi" trong `CLAUDE.md`); agent tham gia một task thì thêm tên mình vào `assignees`. Để tránh xung đột git:
    - Phần đầu (frontmatter, mô tả, tiêu chí) chỉ sửa khi cần và nói rõ trong commit.
    - **Tiến độ**: mỗi agent chỉ ghi vào mục **của mình**; nhật ký chỉ **thêm dòng mới ở cuối**, không sửa dòng cũ.
 4. **Luồng trạng thái** (`status` tổng, và trạng thái của từng agent): `todo` → `in_progress` → `in_review` → `done`; ngoài ra `blocked` (kèm lý do và agent chặn trong mục Blocker) và `cancelled`.
@@ -43,6 +43,7 @@ Trạng thái và category xuất hiện ở **bốn chỗ**, luôn phải khớ
 
 ## 3. Tạo task mới
 - **Chọn số:** sau `git pull --rebase origin main`, lấy số lớn nhất trong `tasks/` cộng 1. Nếu rebase báo trùng ID với task agent khác vừa đẩy, agent chưa push **đổi sang số kế tiếp** (đổi tên file, trường `id`, rồi chạy `list.py --sync`; sửa mọi chỗ dẫn chiếu trong task của mình). `list.py` báo trùng ID.
+- **Không tạo task mới chỉ để sửa/bổ sung kết quả của task đã có**: ghi thẳng vào task đó (thêm tên mình vào `assignees`, ghi nhật ký). Task `FIX` chỉ dùng cho vấn đề mới không thuộc task nào đang mở.
 - **Chọn category** theo bảng ở mục 1. Task `FIX` ghi task/vấn đề gốc ngay đầu mục Mô tả.
 - Copy `_template.md` thành `TASK-NNN-TODO-<CATEGORY>-<slug>.md`, điền frontmatter (có `category`), rồi chạy `python3 tasks/list.py --sync` để `title` và dòng `#` đúng dạng.
 

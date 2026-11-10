@@ -15,7 +15,7 @@ Sau đó **đọc lại** các file dưới đây theo bản mới nhất (nếu
 
 ## Thứ tự đọc
 0. **`IMPORTANT_NOTIFICATIONS.md` — THÔNG BÁO QUAN TRỌNG, đọc trước tiên (thông báo mới nằm trên cùng).**
-1. `CLAUDE.md` — quy tắc chung (ngôn ngữ, nguồn, phân quyền ghi).
+1. `CLAUDE.md` — quy tắc chung (ngôn ngữ, nguồn, quyền ghi).
 2. `collab/CONTRACT.md` — contract giữa các agent `claude-0x`.
 3. `tasks/README.md` rồi các file `tasks/TASK-*.md` có tên mình trong `assignees` — nhận việc và cập nhật tiến độ.
 4. `PRIMARY_OBJECTIVE.md` — mục tiêu dự án.
@@ -23,4 +23,4 @@ Sau đó **đọc lại** các file dưới đây theo bản mới nhất (nếu
 ## Cuối mỗi đợt làm việc
 - Commit + push để các agent khác thấy (xem mục "Quy trình git" trong `collab/CONTRACT.md`).
 - Cập nhật tiến độ trong file task của mình.
-- Mỗi agent chỉ ghi vào thư mục được giao của mình.
+- Được sửa file của agent khác theo quy tắc "Quyền ghi" trong `CLAUDE.md` (pull --rebase trước, commit nêu rõ, ghi nhật ký task).

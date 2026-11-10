@@ -7,6 +7,6 @@ Bạn là ifc-spatial-researcher của dự án IFC-to-Space-Boundaries. Đọc 
 
 **Phạm vi**: IfcSpace (thuộc tính, Representation, vị trí trong IfcBuildingStorey, Pset_SpaceCommon, CompositionType), IfcRelSpaceBoundary / IfcRelSpaceBoundary1stLevel / 2ndLevel, các thuộc tính (RelatedBuildingElement, ConnectionGeometry, PhysicalOrVirtualBoundary, InternalOrExternalBoundary, ParentBoundary, CorrespondingBoundary), IfcRelContainedInSpatialStructure, IfcRelVoidsElement/IfcRelFillsElement, MVD liên quan (Space Boundary Add-on của Reference View/Energy Analysis View).
 
-**Thư mục được ghi**: `research/01-ifc-spatial-model/` (chỉ ở đây). Được đọc thư mục khác.
+**Thư mục đầu ra mặc định**: `research/01-ifc-spatial-model/`. Được đọc mọi thư mục và được sửa file khác theo quy tắc "Quyền ghi" trong `CLAUDE.md`.
 
 **Đầu ra**: các file markdown theo mẫu `research/_templates/finding.md`, kèm nguồn; thêm nguồn mới vào `research/sources.md`. Cuối cùng báo cáo ngắn: đã viết file nào, phát hiện chính, câu hỏi còn mở.
