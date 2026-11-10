@@ -43,8 +43,8 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 - Danh sách nguồn ở trên (agent được tìm thêm nguồn ngoài danh sách, nhất là cho sân vận động/công trình lớn; ghi rõ nguồn nào là bổ sung); `PRIMARY_OBJECTIVE.md` (mục 3 Tiêu chí đạt); `research/_templates/finding.md`.
 
 ## Đầu ra mong đợi (expected_outputs)
-1. `research/04-downstream-validation/dataset-quality-criteria.md`: tiêu chí chất lượng + cách đo (mỗi tiêu chí có ngưỡng, cách kiểm tra bằng IfcOpenShell hoặc thủ công, trọng số/cấp bắt buộc–nên có).
-2. `research/04-downstream-validation/dataset-survey.md`: bảng khảo sát từng nguồn (URL chính thức, giấy phép, định dạng/phiên bản schema, số file, dung lượng, cách tải, điểm theo tiêu chí, kết luận dùng/không dùng và dùng vào việc gì).
+1. `research/04-datasets-and-validation/dataset-quality-criteria.md`: tiêu chí chất lượng + cách đo (mỗi tiêu chí có ngưỡng, cách kiểm tra bằng IfcOpenShell hoặc thủ công, trọng số/cấp bắt buộc–nên có).
+2. `research/04-datasets-and-validation/dataset-survey.md`: bảng khảo sát từng nguồn (URL chính thức, giấy phép, định dạng/phiên bản schema, số file, dung lượng, cách tải, điểm theo tiêu chí, kết luận dùng/không dùng và dùng vào việc gì).
 3. `samples/manifest.yaml`: danh mục file đã tải (đường dẫn, nguồn, URL, giấy phép, ngày tải, sha256, schema, số `IfcSpace`, số `IfcRelSpaceBoundary`, điểm chất lượng).
 4. `samples/fetch_datasets.py` (hoặc tương đương): tải lại được từ manifest, kiểm sha256.
 5. `samples/README.md`: cách dùng, quy ước thư mục, cảnh báo giấy phép.
@@ -75,7 +75,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 - [x] `python3 tasks/list.py` không có cảnh báo
 
 ## Phạm vi từng agent
-> Toàn bộ task. Được ghi: `research/04-downstream-validation/`, `samples/`, `research/sources.md` (chỉ thêm dòng) và file task này.
+> Toàn bộ task. Được ghi: `research/04-datasets-and-validation/`, `samples/`, `research/sources.md` (chỉ thêm dòng) và file task này.
 - **claude-01**: toàn bộ (có thể dùng subagent nội bộ để khảo sát song song; subagent cũng chỉ ghi trong phạm vi trên).
 
 ---
@@ -101,6 +101,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | 2026-11-10T11:55:50+07:00 | in_progress | Viết dataset-quality-criteria.md, samples/inspect_ifc.py, fetch_datasets.py (commit 889637b) |
 | 2026-11-10T12:13:36+07:00 | in_progress | Commit e3262f0: 7 IFC tầng S + manifest. Trước đó đã mở mạng cho zenodo/huggingface/ifcwiki/wbdg/bimcorner (môi trường riêng của repo); openifcmodel.cs.auckland.ac.nz vẫn bị chặn |
 | 2026-11-10T12:22:46+07:00 | in_review | Báo cáo **PARTIAL**. File: research/04-downstream-validation/{dataset-quality-criteria,dataset-survey}.md; samples/{manifest.yaml,fetch_datasets.py,inspect_ifc.py,update_manifest.py,README.md}; samples/small/ (8 IFC + NOTICE.md). Lệnh: fetch_datasets.py (22 file từ URL ghim commit), update_manifest.py (đo toàn bộ), fetch_datasets.py --force --tier S → "Tất cả khớp", --check → 22 OK + 1 MISSING (OTC, manual). Kết quả: 9 S / 5 M / 8 L; 14 file có RSB ground truth (9 file 2nd level). Còn mở: xem Blocker |
+| 2026-11-10T12:28:00+07:00 | in_review | (đồng bộ sau pull) Thư mục `research/04-downstream-validation/` đã đổi tên thành `research/04-datasets-and-validation/`; đã chuyển `dataset-quality-criteria.md`, `dataset-survey.md` và sửa đường dẫn trong `samples/` |
 
 ## Blocker / câu hỏi mở
 - Danh sách nguồn chưa có URL; có nguồn có thể cần đăng nhập hoặc chặn tải tự động (Bibliocad, GrabCAD, Revit Sample): nếu bị chặn thì ghi BLOCKED và nhờ người dùng tải tay.

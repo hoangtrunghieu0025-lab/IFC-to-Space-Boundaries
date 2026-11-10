@@ -1,6 +1,6 @@
 # samples/ — bộ IFC dùng để test
 
-Bộ dữ liệu được chọn ở TASK-001. Tiêu chí chọn và thang điểm nằm ở `research/04-downstream-validation/dataset-quality-criteria.md`; khảo sát từng nguồn ở `research/04-downstream-validation/dataset-survey.md`.
+Bộ dữ liệu được chọn ở TASK-001. Tiêu chí chọn và thang điểm nằm ở `research/04-datasets-and-validation/dataset-quality-criteria.md`; khảo sát từng nguồn ở `research/04-datasets-and-validation/dataset-survey.md`.
 
 ## Cài đặt và tải lại
 

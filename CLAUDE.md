@@ -11,7 +11,7 @@ Mục tiêu dự án: xem `PRIMARY_OBJECTIVE.md`.
 - Không bịa tên chuẩn, class/thuộc tính IFC, thuật ngữ MVD hay tên tham số thư viện. Không chắc thì ghi rõ "chưa xác minh".
 
 ## Phân quyền ghi (tránh xung đột khi chạy song song)
-- Mỗi agent research CHỈ ghi vào thư mục `research/NN-<chủ đề>/` của mình; được đọc thư mục khác.
+- Mỗi agent research CHỈ ghi vào thư mục được giao: `research/NN-<chủ đề>/`, hoặc thư mục con của nó nếu thư mục đó chia theo hướng tiếp cận (ví dụ `research/03-space-and-boundary-algorithms/voxel/`). Task chia nhiều hướng thì mỗi task chỉ ghi vào thư mục con của hướng mình; file tổng quan ở gốc thư mục (ví dụ `approach-critique.md`) chỉ sửa khi task yêu cầu. Được đọc thư mục khác.
 - Chỉ agent `synthesizer` được ghi vào `docs/`.
 - Không sửa `PRIMARY_OBJECTIVE.md`, `CLAUDE.md`, `.claude/` nếu không được yêu cầu.
 

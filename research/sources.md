@@ -25,3 +25,13 @@
 | R2V FloorplanTransformation | https://github.com/art-programmer/FloorplanTransformation | Nhãn vector mặt bằng (TASK-001) | 2026-11-10 |
 | MSD Modified Swiss Dwellings | https://github.com/caspervanengelenburg/msd | Dataset floor plan nhiều căn (TASK-001) | 2026-11-10 |
 | IfcOpenShell 0.9.0 (PyPI; schema EXPRESS nhúng sẵn) | https://pypi.org/project/ifcopenshell/ | Kiểm lớp IfcRelSpaceBoundary1stLevel/2ndLevel theo schema (TASK-001) | 2026-11-10 |
+| IFC2SB — RWTH-E3D (README) | https://github.com/RWTH-E3D/IFC2SB | space-and-boundary-algorithms | 2026-11-10 |
+| Lilis et al. 2021 — Automatic IFC data enrichment with space geometries (UCL) | https://discovery.ucl.ac.uk/id/eprint/10169911/1/bs2021_30888.pdf | space-and-boundary-algorithms | 2026-11-10 |
+| Krijnen et al. 2021 — voxelized thermal analysis of IFC (CIB W78 paper 044) | https://eres.scix.net/pdfs/w78-2021-paper-044.pdf | space-and-boundary-algorithms | 2026-11-10 |
+| FreeCAD — Arch Space | https://wiki.freecad.org/Arch_Space | space-and-boundary-algorithms | 2026-11-10 |
+| Fichter et al. 2021 — Automatic generation of second level space boundary geometry from IFC models (IBPSA BS2021, đã đọc toàn văn) | https://publications.ibpsa.org/proceedings/bs/2021/papers/bs2021_30156.pdf | graph-topology | 2026-11-10 |
+| IFC2SB — mã nguồn (clone 96a89cdff6, đã đọc Graph.cpp, Kernel.cpp, main.cpp) | https://github.com/RWTH-E3D/IFC2SB | graph-topology | 2026-11-10 |
+| Fichter 2022 — luận án RWTH (DOI chuyển hướng đúng; nội dung bị chặn bot, chưa đọc) | https://publications.rwth-aachen.de/record/856693 | graph-topology | 2026-11-10 |
+| bim2sim — mã nguồn (clone 270cd0a36f, đã đọc tasks/bps/sb_*.py) | https://github.com/BIM2SIM/bim2sim | graph-topology | 2026-11-10 |
+| FreeCAD_SketchArch — mã nguồn (clone e81620a893, đã đọc ArchSketchObject.py) | https://github.com/paullee0/FreeCAD_SketchArch | graph-topology | 2026-11-10 |
+| bim2sim Discussion #498 (chỉ thấy qua tìm kiếm) | https://www.github.com/BIM2SIM/bim2sim/discussions/498 | graph-topology | 2026-11-10 |

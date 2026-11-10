@@ -28,7 +28,7 @@ HEADER = """\
 # Danh mục bộ IFC test (TASK-001). Sinh/cập nhật bằng samples/update_manifest.py;
 # phần nhập tay (source, url, license, license_class, building_class, notes) sửa trực tiếp.
 # Tải lại: python3 samples/fetch_datasets.py   (xem samples/README.md)
-# Tiêu chí & thang điểm: research/04-downstream-validation/dataset-quality-criteria.md
+# Tiêu chí & thang điểm: research/04-datasets-and-validation/dataset-quality-criteria.md
 """
 
 KEEP = ["n_storeys", "n_spaces", "n_spaces_with_rep", "n_spaces_in_storey", "n_rsb", "n_rsb_1st_class",

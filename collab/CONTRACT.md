@@ -20,7 +20,7 @@ Các agent làm việc trên cùng repo GitHub, phối hợp qua commit trên `m
 
 | Loại | Thư mục |
 |---|---|
-| Ghi chú nghiên cứu | `research/NN-<chủ đề>/` |
+| Ghi chú nghiên cứu | `research/NN-<chủ đề>/` (hoặc thư mục con theo hướng, xem `CLAUDE.md`) |
 | Tài liệu tổng hợp | `docs/` |
 | Cấu hình (dung sai, quy tắc phân loại) | `config/` |
 | Code | `src/`, test ở `tests/` |

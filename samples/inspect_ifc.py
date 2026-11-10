@@ -2,7 +2,7 @@
 """Đo các chỉ số chất lượng của một (hoặc nhiều) file IFC cho TASK-001.
 
 Chỉ số và cách chấm điểm theo
-`research/04-downstream-validation/dataset-quality-criteria.md`.
+`research/04-datasets-and-validation/dataset-quality-criteria.md`.
 
 Ví dụ:
     python3 samples/inspect_ifc.py samples/small/*.ifc            # in JSON
