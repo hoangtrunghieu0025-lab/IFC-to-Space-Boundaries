@@ -1,17 +1,17 @@
 ---
 id: TASK-003
-title: "[TODO][MAIN] Nghiên cứu hướng dựng thể tích IfcSpace từ hình học B-rep 3D và sinh boundary"
+title: "[IN_REVIEW][MAIN] Nghiên cứu hướng dựng thể tích IfcSpace từ hình học B-rep 3D và sinh boundary"
 category: MAIN
-assignees: []
+assignees: [claude-02]
 created_by: user
 created_at: 2026-11-10T12:11:25+07:00
-updated_at: 2026-11-10T12:11:25+07:00
-status: todo
+updated_at: 2026-11-10T15:04:20+07:00
+status: in_review
 priority: normal
 depends_on: []
 ---
 
-# [TODO][MAIN] TASK-003 — Nghiên cứu hướng dựng thể tích IfcSpace từ hình học B-rep 3D và sinh boundary
+# [IN_REVIEW][MAIN] TASK-003 — Nghiên cứu hướng dựng thể tích IfcSpace từ hình học B-rep 3D và sinh boundary
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -61,7 +61,7 @@ Nhiệm vụ đặc thù: nêu rõ bài nào đã thử trên công trình quy m
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/03-space-and-boundary-algorithms/brep-3d-reconstruction/`, `research/sources.md` (chỉ thêm dòng) và file task này. Không sửa `research/03-space-and-boundary-algorithms/approach-critique.md`; nếu phát hiện cần sửa, ghi vào mục "Blocker / câu hỏi mở" của task.
-- **(chưa giao)**: agent đầu tiên nhận ghi tên vào `assignees`, commit + push rồi mới làm (theo `collab/CONTRACT.md` mục 2).
+- **claude-02**: toàn bộ.
 
 ---
 
@@ -70,12 +70,16 @@ Nhiệm vụ đặc thù: nêu rõ bài nào đã thử trên công trình quy m
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| (chưa giao) | todo | 2026-11-10T12:11:25+07:00 | Tạo từ phản biện các hướng tiếp cận |
+| claude-02 | in_review | 2026-11-10T15:04:20+07:00 | PARTIAL: 5 file xong; thiếu toàn văn Ying & Lee 2021, chưa chạy thuật toán nào |
 
-## Nhật ký — (agent nhận việc thêm mục riêng)
+## Nhật ký — claude-02
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
 |---|---|---|
 | 2026-11-10T12:11:25+07:00 | todo | Tạo task từ `research/03-space-and-boundary-algorithms/approach-critique.md` |
+| 2026-11-10T14:58:14+07:00 | in_progress | Nhận việc (làm trong lúc chờ build IFC2SB của TASK-002); bắt đầu đọc bài UCL, CBIP, Ying & Lee |
+| 2026-11-10T15:04:20+07:00 | in_review | Báo cáo **PARTIAL**. File: `research/03-space-and-boundary-algorithms/brep-3d-reconstruction/{survey,ucl-asg-analysis,boundary-generation-analysis,scalability-notes,assessment}.md`. Đã đọc toàn văn ASG (UCL 2021), CBIP (Lilis 2017, bản thảo đã sửa), Fichter 2021; lệnh: `curl` tải PDF, `pdftotext -layout`. Kết luận: nên làm pipeline hai nửa ASG (sinh space) + CBIP/BIP (boundary mức 2); mức bằng chứng trung bình. Không có số liệu thời gian/RAM trong nguồn; chưa chạy thuật toán nào (chưa kiểm chứng). Phát hiện phụ: CBIP tự nhận 'graph-less' và cần `IfcSpace`; danh mục bài IBPSA ghi nhầm nơi đăng của van Treeck & Rank 2007 (theo CBIP: Eng. with Computers 23(2), DOI 10.1007/s00366-006-0053-7). |
 
 ## Blocker / câu hỏi mở
--
+- **Toàn văn Ying & Lee 2021** (Automation in Construction 126:103659, DOI 10.1016/j.autcon.2021.103659): paywall Elsevier; chỉ đọc được tóm tắt. Nhờ người dùng cung cấp PDF nếu có quyền truy cập.
+- Chưa tìm thấy mã nguồn công khai của ASG/CBIP.
+- Chưa chạy thử thuật toán nào; nếu cần prototype ASG-kiểu, nên lập task riêng.

@@ -35,3 +35,8 @@
 | bim2sim — mã nguồn (clone 270cd0a36f, đã đọc tasks/bps/sb_*.py) | https://github.com/BIM2SIM/bim2sim | graph-topology | 2026-11-10 |
 | FreeCAD_SketchArch — mã nguồn (clone e81620a893, đã đọc ArchSketchObject.py) | https://github.com/paullee0/FreeCAD_SketchArch | graph-topology | 2026-11-10 |
 | bim2sim Discussion #498 (chỉ thấy qua tìm kiếm) | https://www.github.com/BIM2SIM/bim2sim/discussions/498 | graph-topology | 2026-11-10 |
+| Lilis, Giannakis, Rovas 2017 — CBIP (bản thảo đã sửa; đã đọc các phần chính) | https://discovery.ucl.ac.uk/id/eprint/1546334/1/CBIP_revised.pdf | brep-3d-reconstruction | 2026-11-10 |
+| Lilis, Katsigarakis, Rovas 2021 — ASG, IBPSA BS2021 (đã đọc toàn văn) | https://discovery.ucl.ac.uk/id/eprint/10169911/1/bs2021_30888.pdf | brep-3d-reconstruction | 2026-11-10 |
+| Ying & Lee 2021 — multiple geometry representations (chỉ trang tóm tắt) | https://pure.uos.ac.kr/en/publications/generating-second-level-space-boundaries-from-large-scale-ifc-com/ | brep-3d-reconstruction | 2026-11-10 |
+| Bazjanac 2010 — Space boundary requirements (CIB W78; chỉ tóm tắt) | https://architektur-informatik.scix.net/pdfs/w78-2010-127.pdf | brep-3d-reconstruction | 2026-11-10 |
+| OCCT BOPAlgo_Builder API (qua kết quả tìm kiếm) | https://dev.opencascade.org/doc/refman/html/classBOPAlgo__Builder.html | brep-3d-reconstruction | 2026-11-10 |
