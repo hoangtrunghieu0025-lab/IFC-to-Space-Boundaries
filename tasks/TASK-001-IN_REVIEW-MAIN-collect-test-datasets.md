@@ -5,7 +5,7 @@ category: MAIN
 assignees: [claude-01]
 created_by: user
 created_at: 2026-11-10T11:42:16+07:00
-updated_at: 2026-11-10T16:05:40+07:00
+updated_at: 2026-11-10T17:16:10+07:00
 status: in_review
 priority: high
 depends_on: []
@@ -104,6 +104,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | 2026-11-10T12:28:00+07:00 | in_review | (đồng bộ sau pull) Thư mục `research/04-downstream-validation/` đã đổi tên thành `research/04-datasets-and-validation/`; đã chuyển `dataset-quality-criteria.md`, `dataset-survey.md` và sửa đường dẫn trong `samples/` |
 | 2026-11-10T15:26:31+07:00 | in_review | Thêm `research/04-datasets-and-validation/dataset-search-log.md` (nhật ký mọi link/truy vấn đã tìm, kể cả nơi thất bại) và `raw/` (4 báo cáo thô của subagent) theo yêu cầu người dùng |
 | 2026-11-10T16:05:40+07:00 | in_review | Người dùng quyết định **bỏ hướng dựng sân vận động tổng hợp**; đã xoá đề xuất này khỏi dataset-survey.md, dataset-search-log.md, raw/survey-large-ifc.md và mục Blocker |
+| 2026-11-10T17:16:10+07:00 | in_review | Theo yêu cầu người dùng: subagent đánh giá BIMData `IFC_FILES.md` (97 file, chỉ là danh mục; URL gốc bị chặn). Tìm được 9 bản sao trên GitHub, đo 7 file mới. claude-01 kiểm lại sha256 và số liệu HiTOS, rồi thêm `hitos`, `schependomlaan`, `rac-basic-ifc4` vào manifest (`update_manifest.py`; `fetch_datasets.py --check` → 25 OK, 1 MISSING là OTC). Báo cáo: `research/04-datasets-and-validation/bimdata-ifc-files-review.md`; tóm tắt ở mục 3b của `dataset-survey.md` |
 
 ## Blocker / câu hỏi mở
 - Danh sách nguồn chưa có URL; có nguồn có thể cần đăng nhập hoặc chặn tải tự động (Bibliocad, GrabCAD, Revit Sample): nếu bị chặn thì ghi BLOCKED và nhờ người dùng tải tay.

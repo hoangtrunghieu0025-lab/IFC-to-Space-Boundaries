@@ -1528,6 +1528,215 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 8
+- tier: L
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: fe339277c7390b4a99d327846e34239e4d853371fac6951e46503ba8faaa2dcf
+  id: hitos
+  path: samples/corpus_real/hitos.ifc
+  source: opensourceBIM/TestFiles (bản khác của SGD HiTOS trong danh sách BIMData IFC_FILES.md; gốc Statsbygg)
+  url: https://raw.githubusercontent.com/opensourceBIM/TestFiles/2fdf94854a7fba814a17604ed65f543f125cd265/TestData/data/HITOS_070308.ifc
+  license: chưa xác minh — repo opensourceBIM/TestFiles ghi GPL-3.0 (TestData/license.txt, 'Copyright (C) 2009-2017 BIMserver.org');
+    giấy phép file gốc chưa rõ; gốc HiTOS/Statsbygg
+  license_class: unknown
+  building_class: large_public
+  notes: 'Trường cao đẳng Tromsø (Na Uy), IFC2X3, 7 tầng, 243 IfcSpace extrusion, 8 969 RSB ''Second Level'' đều có hình học
+    (1 401 VIRTUAL), 0 CorrespondingBoundary → ground truth 2nd level lớn nhất. Header ghi ''IFC Engine DLL test'': nguồn
+    gốc RSB chưa xác minh. Tìm qua danh sách BIMData (bản gốc tib.eu bị chặn).'
+  size_mb: 64.1
+  schema: IFC2X3
+  measured:
+    n_storeys: 7
+    n_spaces: 243
+    n_spaces_with_rep: 243
+    n_spaces_in_storey: 243
+    n_rsb: 8969
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 8969
+    n_rsb_with_geom: 8969
+    n_rsb_virtual: 1401
+    n_rsb_external: 5306
+    n_rsb_with_corresponding: 0
+    rsb_level_labels:
+      Second Level|: 8969
+    n_products: 12148
+    n_zones: 0
+    counts:
+      IfcWall: 849
+      IfcSlab: 363
+      IfcRoof: 0
+      IfcCovering: 0
+      IfcColumn: 208
+      IfcBeam: 86
+      IfcDoor: 198
+      IfcWindow: 226
+      IfcCurtainWall: 0
+      IfcStair: 14
+      IfcRamp: 3
+      IfcRailing: 6
+      IfcOpeningElement: 519
+    length_unit: MILLIMETRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 200
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 2.29
+    peak_rss_mb: 541.6
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 80.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 10
+    gt_rsb_2nd: 5
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 0
+    div_other: 2
+    div_space_count: 5
+    legal: 0
+    building_type: 8
+- tier: L
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: 2c3565ca1904f2aa61adab92024cf3755b2c5b21a498144d3094d7cb58cebec7
+  id: schependomlaan
+  path: samples/large/schependomlaan.ifc
+  source: buildingSMART Community Sample-Test-Files / ThatOpen engine_web-ifc (Schependomlaan, Nijmegen)
+  url: https://raw.githubusercontent.com/ThatOpen/engine_web-ifc/28a65274189ef6df13832813472612ca068b7911/tests/ifcfiles/public/schependomlaan.ifc
+  license: 'Hạn chế — README Schependomlaan: ''All data owners have given permission to use the data for scientific and academic
+    purposes'''
+  license_class: use_only
+  building_class: residential
+  notes: Chung cư 10 căn, ArchiCAD 18, IFC2X3, 6 tầng, 100 IfcSpace (94 chỉ có FootPrint 2D + Box, không có Body), 1 675 RSB
+    '2ndLevel'/'2a'. Hợp để so IoU cho lát cắt + polygonize. Chỉ dùng nội bộ, không phát hành.
+  size_mb: 49.29
+  schema: IFC2X3
+  measured:
+    n_storeys: 6
+    n_spaces: 100
+    n_spaces_with_rep: 100
+    n_spaces_in_storey: 100
+    n_rsb: 1675
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 1675
+    n_rsb_with_geom: 1675
+    n_rsb_virtual: 667
+    n_rsb_external: 1459
+    n_rsb_with_corresponding: 0
+    rsb_level_labels:
+      2ndLevel|2a: 1675
+    n_products: 3822
+    n_zones: 0
+    counts:
+      IfcWall: 934
+      IfcSlab: 279
+      IfcRoof: 0
+      IfcCovering: 1262
+      IfcColumn: 23
+      IfcBeam: 174
+      IfcDoor: 205
+      IfcWindow: 259
+      IfcCurtainWall: 0
+      IfcStair: 9
+      IfcRamp: 0
+      IfcRailing: 90
+      IfcOpeningElement: 79
+    length_unit: MILLIMETRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 200
+    n_elements_without_body: 4
+    geom_ok_ratio_spaces: 0.06
+    open_s: 1.63
+    peak_rss_mb: 410.8
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 83.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 10
+    gt_rsb_2nd: 5
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 0
+    div_other: 2
+    div_space_count: 5
+    legal: 8
+    building_type: 3
+- tier: L
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: 1421b55315b99044b639db2704dc086aeb42a37d6032bbc2aecdc8649f7c05f2
+  id: rac-basic-ifc4
+  path: samples/corpus_real/rac-basic-ifc4.ifc
+  source: opensourceBIM/TestFiles (ifc4rac_basic_sample_project; gốc Autodesk Revit sample)
+  url: https://raw.githubusercontent.com/opensourceBIM/TestFiles/2fdf94854a7fba814a17604ed65f543f125cd265/TestData/data/ifc4rac_basic_sample_project.ifc
+  license: chưa xác minh — repo opensourceBIM/TestFiles ghi GPL-3.0 (TestData/license.txt, 'Copyright (C) 2009-2017 BIMserver.org');
+    giấy phép file gốc chưa rõ; gốc Autodesk
+  license_class: unknown
+  building_class: residential
+  notes: IFC4 Revit, 6 tầng, 14 IfcSpace, 0 RSB, có mái và curtain wall.
+  size_mb: 25.4
+  schema: IFC4
+  measured:
+    n_storeys: 6
+    n_spaces: 14
+    n_spaces_with_rep: 14
+    n_spaces_in_storey: 14
+    n_rsb: 0
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 0
+    n_rsb_with_geom: 0
+    n_rsb_virtual: 0
+    n_rsb_external: 0
+    n_rsb_with_corresponding: 0
+    rsb_level_labels: {}
+    n_products: 524
+    n_zones: 0
+    counts:
+      IfcWall: 48
+      IfcSlab: 12
+      IfcRoof: 2
+      IfcCovering: 3
+      IfcColumn: 3
+      IfcBeam: 0
+      IfcDoor: 16
+      IfcWindow: 17
+      IfcCurtainWall: 9
+      IfcStair: 3
+      IfcRamp: 0
+      IfcRailing: 10
+      IfcOpeningElement: 33
+    length_unit: MILLIMETRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 100
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 0.94
+    peak_rss_mb: 263.3
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 63.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 0
+    gt_rsb_2nd: 0
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 3
+    div_other: 2
+    div_space_count: 5
+    legal: 0
+    building_type: 3
 - id: otc-conference-center
   path: samples/corpus_real/otc-conference-center-ifc4.ifc
   tier: null

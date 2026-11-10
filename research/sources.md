@@ -49,3 +49,5 @@
 | Cloud2BIM (chỉ tóm tắt qua tìm kiếm) | https://arxiv.org/html/2503.11498v1 | voxel, floorplan-slice-polygonize | 2026-11-10 |
 | OSArch — Create ifcSpaces in BlenderBIM (qua tìm kiếm) | https://community.osarch.org/discussion/comment/15839/ | floorplan-slice-polygonize | 2026-11-10 |
 | floorplan-parser geometry.py (detect_rooms_from_walls; qua tìm kiếm) | https://huggingface.co/rikhoffbauer2/floorplan-parser/blob/main/floorplan/geometry.py | floorplan-slice-polygonize | 2026-11-10 |
+| BIMData R&D IFC_FILES.md — đánh giá toàn bộ 97 file (đã đọc; danh mục, không có LICENSE) | https://github.com/bimdata/BIMData-Research-and-Development/blob/master/pages/IFC_FILES.md | datasets (TASK-001) | 2026-11-10 |
+| HITOS_070308.ifc (opensourceBIM TestFiles; bản sao SGD HiTOS) | https://github.com/opensourceBIM/TestFiles/blob/master/TestData/data/HITOS_070308.ifc | datasets (TASK-001) | 2026-11-10 |

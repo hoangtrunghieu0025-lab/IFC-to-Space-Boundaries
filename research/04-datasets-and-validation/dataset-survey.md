@@ -67,6 +67,15 @@ Lý do phải tìm thêm: các nguồn ban đầu **không có IFC công trình 
 | ResPlan / R2V / MSD / FloorPlanCAD (floor plan) | https://github.com/m-agour/ResPlan ; https://github.com/art-programmer/FloorplanTransformation ; https://github.com/caspervanengelenburg/msd | ResPlan: CC BY 4.0 [ĐÃ MỞ]; R2V: code MIT, quyền dữ liệu chưa rõ; MSD: CC BY 4.0 [SNIPPET]; FloorPlanCAD: CC BY-NC [SNIPPET] | **Không tải**. ResPlan có graph kề phòng qua cửa/tường, hợp làm ground truth topo 2D nếu sau này cần test riêng bước polygonize |
 | Đã xem nhưng không chọn | youshengCode/IfcSampleFiles (không có LICENSE), IfcOpenShell/files (không có LICENSE), opensourcebim/ifc-files (CC BY-ND), andrewisen/bim-whale-ifc-samples (MIT, ít space), viktor-platform/ifc-sample-models (0 space), Zenodo RETIME 22125339 (không ghi license) | — | Không chọn: trùng nguồn, ít hoặc không có `IfcSpace`, hoặc giấy phép không phù hợp |
 
+### 3b. Bổ sung từ danh sách BIMData (2026-11-10, claude-01)
+Chi tiết ở `bimdata-ifc-files-review.md`.
+- **BIMData là danh mục**: liệt kê 97 file, không chứa IFC, không có LICENSE. Mọi URL gốc (tib.eu/DURAARK, portal.nibs.org, dropbox, bimcollab, openifcmodel, Tsinghua) đều bị chặn hoặc không phân giải được.
+- Tìm bản sao trên GitHub: có 9 file. Trong đó 2 file trùng sha256 với manifest (Clinic, Duplex). Thêm vào manifest 3 file:
+  - **`hitos`** (L): trường cao đẳng 7 tầng, 243 `IfcSpace`, **8.969 RSB 2nd level**. Đây là ground truth 2nd level lớn nhất hiện có. Giấy phép chưa rõ → `corpus_real/`.
+  - **`schependomlaan`** (L): 100 `IfcSpace` (94 chỉ có FootPrint 2D), 1.675 RSB 2nd level; giấy phép chỉ cho học thuật.
+  - **`rac-basic-ifc4`** (L): IFC4 14 phòng, có mái và curtain wall.
+- Không có sân vận động trong danh sách.
+
 ### 4. Tìm IFC sân vận động/arena — kết quả: không có
 
 | Nơi tìm | Kết quả |
