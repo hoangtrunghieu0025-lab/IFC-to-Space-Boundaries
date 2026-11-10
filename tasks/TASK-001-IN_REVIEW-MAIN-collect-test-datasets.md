@@ -1,17 +1,17 @@
 ---
 id: TASK-001
-title: "[IN_PROGRESS][MAIN] Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test"
+title: "[IN_REVIEW][MAIN] Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test"
 category: MAIN
 assignees: [claude-01]
 created_by: user
 created_at: 2026-11-10T11:42:16+07:00
-updated_at: 2026-11-10T11:51:52+07:00
-status: in_progress
+updated_at: 2026-11-10T12:22:46+07:00
+status: in_review
 priority: high
 depends_on: []
 ---
 
-# [IN_PROGRESS][MAIN] TASK-001 — Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test
+# [IN_REVIEW][MAIN] TASK-001 — Khảo sát nguồn dữ liệu và thu thập bộ bản vẽ CAD/BIM dùng để test
 <!-- Thẻ trạng thái/category ở tên file, title và dòng này đều sinh từ `status` + `category`: sửa hai trường đó rồi chạy python3 tasks/list.py --sync -->
 
 ## Mô tả
@@ -65,14 +65,14 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | Mức phù hợp pipeline | Dùng được để (a) debug thuật toán, (b) đo độ chính xác so với ground truth, (c) test hiệu năng |
 
 ## Tiêu chí hoàn thành (acceptance)
-- [ ] Mỗi nguồn trong danh sách có một dòng trong `dataset-survey.md` với URL chính thức đã mở kiểm tra thật (không đoán URL), có ngày truy cập; nguồn không truy cập được ghi "chưa xác minh"
-- [ ] `dataset-quality-criteria.md` có ngưỡng đo được cho từng tiêu chí
-- [ ] **Tầng L**: ≥1–2 file IFC công trình lớn/phức hợp đông người (ưu tiên sân vận động); mỗi file ghi dung lượng, số phần tử, số `IfcSpace`, thời gian và RAM khi mở bằng IfcOpenShell
-- [ ] **Tầng S**: ≥5 file IFC nhà ở/công trình nhỏ, gồm ≥1 IFC2x3 và ≥1 IFC4, ≥3 file có `IfcSpace` có hình học
-- [ ] Tổng cộng có ≥1 file nhiều tầng; mỗi file đã mở và đếm `IfcSpace` / `IfcRelSpaceBoundary` bằng IfcOpenShell (ghi lệnh đã chạy)
-- [ ] `samples/manifest.yaml` khớp thực tế; chạy lại script tải thì sha256 khớp
-- [ ] Không file nào chưa rõ giấy phép bị commit
-- [ ] `python3 tasks/list.py` không có cảnh báo
+- [x] Mỗi nguồn trong danh sách có một dòng trong `dataset-survey.md` với URL chính thức đã mở kiểm tra thật (không đoán URL), có ngày truy cập; nguồn không truy cập được ghi "chưa xác minh"
+- [x] `dataset-quality-criteria.md` có ngưỡng đo được cho từng tiêu chí
+- [x] **Tầng L**: ≥1–2 file IFC công trình lớn/phức hợp đông người (ưu tiên sân vận động); mỗi file ghi dung lượng, số phần tử, số `IfcSpace`, thời gian và RAM khi mở bằng IfcOpenShell — *8 file L (phòng khám 269 phòng, trường học 307 phòng, toà đại học TalTech, tháp 50 tầng, file 562 MB…). **Không có sân vận động**: không tìm thấy IFC sân vận động công khai, xem `dataset-survey.md` mục 4*
+- [x] **Tầng S**: ≥5 file IFC nhà ở/công trình nhỏ, gồm ≥1 IFC2x3 và ≥1 IFC4, ≥3 file có `IfcSpace` có hình học
+- [x] Tổng cộng có ≥1 file nhiều tầng; mỗi file đã mở và đếm `IfcSpace` / `IfcRelSpaceBoundary` bằng IfcOpenShell (ghi lệnh đã chạy)
+- [x] `samples/manifest.yaml` khớp thực tế; chạy lại script tải thì sha256 khớp
+- [x] Không file nào chưa rõ giấy phép bị commit
+- [x] `python3 tasks/list.py` không có cảnh báo
 
 ## Phạm vi từng agent
 > Toàn bộ task. Được ghi: `research/04-downstream-validation/`, `samples/`, `research/sources.md` (chỉ thêm dòng) và file task này.
@@ -85,7 +85,7 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 ## Tổng quan
 | Agent | Trạng thái | Cập nhật lúc | Ghi chú ngắn |
 |---|---|---|---|
-| claude-01 | in_progress | 2026-11-10T11:51:52+07:00 | Nhận task, bắt đầu khảo sát nguồn |
+| claude-01 | in_review | 2026-11-10T12:22:46+07:00 | PARTIAL→chờ duyệt: 22 IFC đo xong, 8 file S đã commit; thiếu sân vận động, OTC cần tải tay |
 
 ## Nhật ký — (agent nhận việc thêm mục riêng)
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
@@ -98,6 +98,13 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | Thời điểm (GMT+7) | Trạng thái | Nội dung |
 |---|---|---|
 | 2026-11-10T11:51:52+07:00 | in_progress | Nhận task; bắt đầu khảo sát nguồn IFC (song song bằng subagent) |
+| 2026-11-10T11:55:50+07:00 | in_progress | Viết dataset-quality-criteria.md, samples/inspect_ifc.py, fetch_datasets.py (commit 889637b) |
+| 2026-11-10T12:13:36+07:00 | in_progress | Commit e3262f0: 7 IFC tầng S + manifest. Trước đó đã mở mạng cho zenodo/huggingface/ifcwiki/wbdg/bimcorner (môi trường riêng của repo); openifcmodel.cs.auckland.ac.nz vẫn bị chặn |
+| 2026-11-10T12:22:46+07:00 | in_review | Báo cáo **PARTIAL**. File: research/04-downstream-validation/{dataset-quality-criteria,dataset-survey}.md; samples/{manifest.yaml,fetch_datasets.py,inspect_ifc.py,update_manifest.py,README.md}; samples/small/ (8 IFC + NOTICE.md). Lệnh: fetch_datasets.py (22 file từ URL ghim commit), update_manifest.py (đo toàn bộ), fetch_datasets.py --force --tier S → "Tất cả khớp", --check → 22 OK + 1 MISSING (OTC, manual). Kết quả: 9 S / 5 M / 8 L; 14 file có RSB ground truth (9 file 2nd level). Còn mở: xem Blocker |
 
 ## Blocker / câu hỏi mở
 - Danh sách nguồn chưa có URL; có nguồn có thể cần đăng nhập hoặc chặn tải tự động (Bibliocad, GrabCAD, Revit Sample): nếu bị chặn thì ghi BLOCKED và nhờ người dùng tải tay.
+- (claude-01) **Không có IFC sân vận động công khai** (đã tìm trên GitHub, Zenodo, các danh sách dataset, WebSearch EN/FR/DE). Cần người dùng chọn: dựng sân vận động tổng hợp bằng IfcOpenShell (đề xuất tạo task mới) hay cung cấp model thật (để trong `samples/corpus_real/`).
+- (claude-01) **OTC Conference Center / West Riverside Hospital** (openifcmodel.cs.auckland.ac.nz) bị chặn từ container: nhờ người dùng tải tay (hướng dẫn trong manifest, mục `otc-conference-center`).
+- (claude-01) Cần người dùng cho URL của "OpenFloorPlan" và "DWGFree" (không tìm thấy).
+- (claude-01) Tuỳ chọn: mở CDN `us.aws.cdn.hf.co` để tải model BIM-Edit lớn (tới 349 MB, CC BY 4.0).

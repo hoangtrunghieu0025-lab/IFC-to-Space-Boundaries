@@ -34,7 +34,7 @@ HEADER = """\
 KEEP = ["n_storeys", "n_spaces", "n_spaces_with_rep", "n_spaces_in_storey", "n_rsb", "n_rsb_1st_class",
         "n_rsb_2nd_class", "n_rsb_name_2ndlevel", "n_rsb_with_geom", "n_rsb_virtual", "n_rsb_external",
         "n_rsb_with_corresponding", "rsb_level_labels", "n_products", "n_zones", "counts", "length_unit",
-        "geom_ok_ratio_elements", "geom_tested_elements", "geom_ok_ratio_spaces", "open_s", "peak_rss_mb",
+        "geom_ok_ratio_elements", "geom_tested_elements", "n_elements_without_body", "geom_ok_ratio_spaces", "open_s", "peak_rss_mb",
         "ifcopenshell"]
 
 

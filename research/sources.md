@@ -2,3 +2,26 @@
 
 | Nguồn | URL | Chủ đề | Ngày truy cập |
 |---|---|---|---|
+| buildingSMART Sample-Test-Files (CC BY 4.0) | https://github.com/buildingSMART/Sample-Test-Files | IFC mẫu (TASK-001) | 2026-11-10 |
+| buildingSMART Community Sample-Test-Files (Duplex, Clinic, Esplanades, Molio) | https://github.com/buildingsmart-community/Community-Sample-Test-Files | IFC mẫu (TASK-001) | 2026-11-10 |
+| KIT IFC Examples (IAI/KIT, "unrestricted use") | https://www.ifcwiki.org/index.php?title=KIT_IFC_Examples | IFC mẫu có RSB 2nd level (TASK-001) | 2026-11-10 |
+| IFC-to-gbXML-converter — Test cases (GPL-3.0) | https://github.com/brunopostle/IFC-to-gbXML-converter | IFC2x3 có RSB 2nd level (TASK-001) | 2026-11-10 |
+| RWTH-E3D DigitalHub (MIT) | https://github.com/RWTH-E3D/DigitalHub | IFC4 có IfcRelSpaceBoundary1stLevel/2ndLevel (TASK-001) | 2026-11-10 |
+| Zenodo — SmartlivingEPC TalTech BIM model (CC BY 4.0) | https://zenodo.org/records/15782433 | IFC4 công trình công cộng có RSB (TASK-001) | 2026-11-10 |
+| Zenodo — GNI BIM Dataset, TUM (CC BY 4.0) | https://zenodo.org/records/19722012 | IFC lớn, test hiệu năng (TASK-001) | 2026-11-10 |
+| GNI-BIM-Dataset (README, danh sách nguồn BIM online) | https://github.com/ZijianWang-ZW/GNI-BIM-Dataset | Danh mục dataset BIM (TASK-001) | 2026-11-10 |
+| Hugging Face — BIM-Edit (CC BY 4.0) | https://huggingface.co/datasets/BIM-Edit/BIM-Edit | IFC4X3 giảng đường có RSB (TASK-001) | 2026-11-10 |
+| Hugging Face — DeKH German Hospital Dataset (CC BY-NC-SA 4.0, gated) | https://huggingface.co/datasets/RPTU-FGMB/DeKH | IFC bệnh viện, chưa tải (TASK-001) | 2026-11-10 |
+| ara3d IFC-toolkit test-files (giấy phép file chưa xác minh) | https://github.com/ara3d/IFC-toolkit | IFC lớn: Holter Tower, R8, NUS skolebygg (TASK-001) | 2026-11-10 |
+| ThatOpen engine_web-ifc test files | https://github.com/ThatOpen/engine_web-ifc | Bản sao IFC mẫu (Office_A…) (TASK-001) | 2026-11-10 |
+| opensourceBIM TestFiles (GPL-3.0 nhãn repo) | https://github.com/opensourceBIM/TestFiles | IFC mẫu BIMserver (TASK-001) | 2026-11-10 |
+| IfcOpenHouse (Apache-2.0) | https://github.com/cvillagrasa/IfcOpenHouse | IFC sinh bằng code, 0 IfcSpace (TASK-001) | 2026-11-10 |
+| BIMData R&D — danh sách IFC_FILES | https://github.com/bimdata/BIMData-Research-and-Development/blob/master/pages/IFC_FILES.md | Danh mục IFC công khai (TASK-001) | 2026-11-10 |
+| awesome-bim-datasets | https://github.com/nbharathik/awesome-bim-datasets | Danh mục dataset BIM (TASK-001) | 2026-11-10 |
+| BIMCorner (không có thư viện IFC mẫu) | https://bimcorner.com/ | Khảo sát nguồn (TASK-001) | 2026-11-10 |
+| CubiCasa5K (CC BY-NC 4.0) | https://github.com/CubiCasa/CubiCasa5k | Dataset floor plan (TASK-001) | 2026-11-10 |
+| Structured3D | https://github.com/bertjiazheng/Structured3D | Dataset 3D phòng–mặt (TASK-001) | 2026-11-10 |
+| ResPlan (CC BY 4.0) | https://github.com/m-agour/ResPlan | Dataset floor plan vector + graph phòng (TASK-001) | 2026-11-10 |
+| R2V FloorplanTransformation | https://github.com/art-programmer/FloorplanTransformation | Nhãn vector mặt bằng (TASK-001) | 2026-11-10 |
+| MSD Modified Swiss Dwellings | https://github.com/caspervanengelenburg/msd | Dataset floor plan nhiều căn (TASK-001) | 2026-11-10 |
+| IfcOpenShell 0.9.0 (PyPI; schema EXPRESS nhúng sẵn) | https://pypi.org/project/ifcopenshell/ | Kiểm lớp IfcRelSpaceBoundary1stLevel/2ndLevel theo schema (TASK-001) | 2026-11-10 |

@@ -127,9 +127,21 @@ def geometry_check(f, sample: int, seed: int = 0) -> dict:
     import ifcopenshell.geom
 
     settings = ifcopenshell.geom.settings()
-    elems = []
+    def has_body(e) -> bool:
+        # Chỉ thử phần tử có biểu diễn 3D 'Body'. Phần tử chỉ có 'Axis'/'FootPrint' 2D
+        # (ví dụ tường giả của ArchiCAD) không phải lỗi hình học, đếm riêng.
+        rep = e.Representation
+        return rep is not None and any(r.RepresentationIdentifier == "Body" for r in rep.Representations)
+
+    elems, no_body = [], 0
     for cls in ["IfcWall", "IfcSlab", "IfcRoof", "IfcColumn", "IfcDoor", "IfcWindow", "IfcCovering"]:
-        elems += [e for e in f.by_type(cls) if e.Representation is not None]
+        for e in f.by_type(cls):
+            if e.Representation is None:
+                continue
+            if has_body(e):
+                elems.append(e)
+            else:
+                no_body += 1
     spaces = [s for s in f.by_type("IfcSpace") if s.Representation is not None]
     rng = random.Random(seed)
 
@@ -152,6 +164,7 @@ def geometry_check(f, sample: int, seed: int = 0) -> dict:
     return {
         "geom_ok_ratio_elements": None if r_el is None else round(r_el, 4),
         "geom_tested_elements": n_el,
+        "n_elements_without_body": no_body,
         "geom_ok_ratio_spaces": None if r_sp is None else round(r_sp, 4),
         "geom_tested_spaces": n_sp,
         "geom_check_s": round(time.time() - t0, 2),

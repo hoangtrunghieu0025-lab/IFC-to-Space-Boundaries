@@ -11,7 +11,7 @@
 | Mã | Tiêu chí | Ngưỡng | Cách kiểm tra |
 |---|---|---|---|
 | G1 | Mở được bằng IfcOpenShell | `ifcopenshell.open()` không ném lỗi | `inspect_ifc.py` (trường `error` không có) |
-| G2 | Có phần tử bao có hình học | ≥1 `IfcWall` hoặc `IfcSlab` có `Representation`, và `geom_ok_ratio_elements` ≥ 0,90 | `inspect_ifc.py` (lấy mẫu ngẫu nhiên ≤200 phần tử gọi `ifcopenshell.geom.create_shape`) |
+| G2 | Có phần tử bao có hình học | ≥1 `IfcWall` hoặc `IfcSlab` có biểu diễn `Body`, và `geom_ok_ratio_elements` ≥ 0,90 | `inspect_ifc.py` (lấy mẫu ngẫu nhiên ≤200 phần tử có `Body`, gọi `ifcopenshell.geom.create_shape`). Phần tử chỉ có biểu diễn 2D (`Axis`/`FootPrint`) không tính là lỗi, được đếm riêng trong `n_elements_without_body`. Lý do: `molio` có 91 tường ArchiCAD `[L]AD` chỉ có `Axis`; nếu tính vào thì tỉ lệ tụt xuống 0,825 dù hình học thật không lỗi |
 | G3 | Nguồn gốc xác định được | Có URL nguồn đã mở kiểm tra thật và ngày truy cập. Giấy phép **chưa rõ vẫn qua cổng** nhưng file chỉ để ở `samples/corpus_real/`, không commit | Thủ công, ghi vào manifest (`license`, `license_class`) |
 
 ### 2. Tầng quy mô

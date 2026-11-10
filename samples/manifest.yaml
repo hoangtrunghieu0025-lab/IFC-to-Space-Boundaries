@@ -15,7 +15,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: c4db65ba847f6b369a95d6c54fa11f4750cbe6d59f021934e8923d8d578e5885
-  notes: Nhà 1 tầng tối giản, 2 IfcSpace, không RSB; cùng mô hình có bản IFC4 và IFC4X3 → test đa schema.
   size_mb: 0.09
   schema: IFC2X3
   measured:
@@ -51,9 +50,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 7
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.01
-    peak_rss_mb: 77.2
+    open_s: 0.0
+    peak_rss_mb: 77.5
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 58.0
@@ -70,6 +70,7 @@ files:
     div_space_count: 0
     legal: 15
     building_type: 0
+  notes: Nhà 1 tầng tối giản, 2 IfcSpace, không RSB; cùng mô hình có bản IFC4 và IFC4X3 → test đa schema.
 - id: bsi-ifc4-building-architecture
   path: samples/small/bsi-ifc4-building-architecture.ifc
   tier: S
@@ -81,7 +82,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: 8790a1e193e82b8e7e7f337ec2633cd40f2120590317a1443503a25b079e2e80
-  notes: Bản IFC4 của mô hình trên.
   size_mb: 0.14
   schema: IFC4
   measured:
@@ -117,9 +117,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 7
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.01
-    peak_rss_mb: 76.6
+    open_s: 0.0
+    peak_rss_mb: 76.9
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 58.0
@@ -136,6 +137,7 @@ files:
     div_space_count: 0
     legal: 15
     building_type: 0
+  notes: Bản IFC4 của mô hình trên.
 - id: bsi-ifc4x3-building-architecture
   path: samples/small/bsi-ifc4x3-building-architecture.ifc
   tier: S
@@ -147,7 +149,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: 96e7103812b15b65eb1fd7802d36b9962833485dce5ead4f440bbf529530881d
-  notes: Bản IFC4X3_ADD2 của mô hình trên.
   size_mb: 0.14
   schema: IFC4X3
   measured:
@@ -183,9 +184,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 7
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.01
-    peak_rss_mb: 77.3
+    open_s: 0.0
+    peak_rss_mb: 77.4
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 58.0
@@ -202,6 +204,7 @@ files:
     div_space_count: 0
     legal: 15
     building_type: 0
+  notes: Bản IFC4X3_ADD2 của mô hình trên.
 - id: duplex-a
   path: samples/small/duplex-a.ifc
   tier: S
@@ -214,7 +217,6 @@ files:
   building_class: residential
   downloaded_at: '2026-11-10'
   sha256: b347a2c8aa8fff6db896a4417a9c50c22ac0ccd7c5cfc22b99b8d29336c606ed
-  notes: Nhà song lập 2 căn, 21 IfcSpace, RSB 1st level (Name='1stLevel'); Git LFS → tải qua media.githubusercontent.com.
   size_mb: 2.38
   schema: IFC2X3
   measured:
@@ -251,9 +253,10 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 129
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.06
-    peak_rss_mb: 94.4
+    open_s: 0.05
+    peak_rss_mb: 94.3
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 88.0
@@ -270,6 +273,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 3
+  notes: Nhà song lập 2 căn, 21 IfcSpace, RSB 1st level (Name='1stLevel'); Git LFS → tải qua media.githubusercontent.com.
 - id: pilot-project-1
   path: samples/small/pilot-project-1.ifc
   tier: S
@@ -282,7 +286,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: 23a0b944598d4c282b7da26c39144b0292a6ab487745bb43f4cb486afed2d453
-  notes: Revit 2016, RSB 2nd level (Name='2ndLevel'), rất nhỏ; ground truth 2nd level IFC2x3.
   size_mb: 0.22
   schema: IFC2X3
   measured:
@@ -319,9 +322,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 27
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
     open_s: 0.01
-    peak_rss_mb: 84.4
+    peak_rss_mb: 84.6
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 85.0
@@ -338,6 +342,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 0
+  notes: Revit 2016, RSB 2nd level (Name='2ndLevel'), rất nhỏ; ground truth 2nd level IFC2x3.
 - id: pilot-project-2
   path: samples/small/pilot-project-2.ifc
   tier: S
@@ -350,7 +355,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: 03c1ea1ba2533f62ce159185b44312661c57101e2a395d4938f9ea6101ba268b
-  notes: Như pilot-project-1, 4 tầng.
   size_mb: 0.32
   schema: IFC2X3
   measured:
@@ -387,6 +391,7 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 53
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
     open_s: 0.01
     peak_rss_mb: 85.3
@@ -406,6 +411,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 0
+  notes: Như pilot-project-1, 4 tầng.
 - id: pilot-project-3
   path: samples/small/pilot-project-3.ifc
   tier: S
@@ -418,7 +424,6 @@ files:
   building_class: null
   downloaded_at: '2026-11-10'
   sha256: d19606a8828cf73f37d635b28b5ba3910d9cae74aebe12da0a6a2ede065c3d9c
-  notes: Như pilot-project-1.
   size_mb: 0.56
   schema: IFC2X3
   measured:
@@ -455,9 +460,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 48
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
     open_s: 0.01
-    peak_rss_mb: 129.6
+    peak_rss_mb: 129.9
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 85.0
@@ -474,18 +480,21 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 0
+  notes: Như pilot-project-1.
 - id: ac20-fzk-haus
-  path: samples/corpus_real/ac20-fzk-haus.ifc
+  path: samples/small/ac20-fzk-haus.ifc
   tier: S
-  commit: false
-  source: KIT IFC Examples (bản sao trong ThatOpen/engine_web-ifc)
-  url: https://raw.githubusercontent.com/ThatOpen/engine_web-ifc/d2c92aa91bc5e8ebf70ff3f64d363a583cd5503f/tests/ifcfiles/public/AC20-FZK-Haus.ifc
-  license: chưa xác minh — KIT IFC Examples; repo chứa bản sao theo MPL-2.0 (cho mã)
-  license_class: unknown
+  commit: true
+  source: KIT IFC Examples (ifcwiki.org)
+  url: https://www.ifcwiki.org/images/e/e3/AC20-FZK-Haus.ifc
+  license: 'KIT ''for unrestricted use'' — nguyên văn trên https://www.ifcwiki.org/index.php?title=KIT_IFC_Examples: ''These
+    examples are made by the Institute for Applied Computer Science (IAI) at the Karlsruhe Institute of Technology (KIT),
+    and are for unrestricted use. If you use these examples for publications, please provide the following source: Institute
+    for Automation and Applied Informatics (IAI) / Karlsruhe Institute of Technology (KIT)'''
+  license_class: redistributable
   building_class: residential
   downloaded_at: '2026-11-10'
   sha256: 70cc8ff245fc0894201d96496c031005a5cbd7a96b22d8a1b87c5a883fb77994
-  notes: IFC4 ArchiCAD, nhà 2 tầng mái dốc, RSB 2nd level (Name='2ndLevel', Description='2a'), IfcSpace Brep.
   size_mb: 2.57
   schema: IFC4
   measured:
@@ -522,12 +531,13 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 33
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.07
-    peak_rss_mb: 110.7
+    open_s: 0.06
+    peak_rss_mb: 111.6
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
-  score: 72.0
+  score: 87.0
   score_detail:
     gt_space_geom: 15.0
     gt_space_storey: 5
@@ -539,8 +549,10 @@ files:
     div_roof: 0
     div_other: 2
     div_space_count: 2
-    legal: 0
+    legal: 15
     building_type: 3
+  notes: IFC4 ArchiCAD, nhà 2 tầng mái dốc, RSB 2nd level (Name='2ndLevel', Description='2a'), IfcSpace Brep. Bản ifcwiki
+    trùng sha256 với bản sao trong ThatOpen/engine_web-ifc.
 - id: ac11-fzk-haus
   path: samples/corpus_real/ac11-fzk-haus.ifc
   tier: S
@@ -552,7 +564,6 @@ files:
   building_class: residential
   downloaded_at: '2026-11-10'
   sha256: c89069da241e149166e0551128aaf088def582a48c267e67a08ca88c3f1319a0
-  notes: Cùng nhà FZK nhưng IFC2x3 (ArchiCAD 11), RSB 'Second Level' → đối chiếu IFC2x3 vs IFC4.
   size_mb: 4.15
   schema: IFC2X3
   measured:
@@ -589,8 +600,9 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 34
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.12
+    open_s: 0.11
     peak_rss_mb: 107.8
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
@@ -608,6 +620,7 @@ files:
     div_space_count: 2
     legal: 0
     building_type: 3
+  notes: Cùng nhà FZK nhưng IFC2x3 (ArchiCAD 11), RSB 'Second Level' → đối chiếu IFC2x3 vs IFC4.
 - id: clinic-architectural
   path: samples/large/clinic-architectural.ifc
   tier: L
@@ -620,7 +633,6 @@ files:
   building_class: large_public
   downloaded_at: '2026-11-10'
   sha256: 2ac970ce065ecac4e0c9e5f453a257169e90d0067f419b7e33533a64ef837880
-  notes: Phòng khám nha-y 4 tầng, 269 IfcSpace, 3124 RSB 1st level → ground truth quy mô lớn, công trình công cộng.
   size_mb: 13.0
   schema: IFC2X3
   measured:
@@ -657,9 +669,10 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.47
-    peak_rss_mb: 165.5
+    open_s: 0.29
+    peak_rss_mb: 165.7
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 90.0
@@ -676,6 +689,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 8
+  notes: Phòng khám nha-y 4 tầng, 269 IfcSpace, 3124 RSB 1st level → ground truth quy mô lớn, công trình công cộng.
 - id: esplanades
   path: samples/large/esplanades.ifc
   tier: L
@@ -687,7 +701,6 @@ files:
   building_class: residential
   downloaded_at: '2026-11-10'
   sha256: b97db10a2cb679a6543ccf4e34cfa8e77753f14e67f51b403e6cd9a819e3748f
-  notes: Chung cư 7 tầng (Estonia), 285 IfcSpace Brep, không RSB → test suy luận/sinh RSB nhiều phòng.
   size_mb: 12.11
   schema: IFC2X3
   measured:
@@ -723,9 +736,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.36
-    peak_rss_mb: 158.8
+    open_s: 0.35
+    peak_rss_mb: 158.9
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 78.0
@@ -742,6 +756,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 3
+  notes: Chung cư 7 tầng (Estonia), 285 IfcSpace Brep, không RSB → test suy luận/sinh RSB nhiều phòng.
 - id: molio
   path: samples/large/molio.ifc
   tier: L
@@ -754,7 +769,6 @@ files:
   building_class: office
   downloaded_at: '2026-11-10'
   sha256: 626654e3b62648d3f0499e17c04d4f087931f048ddf79410f6cb90e45004c086
-  notes: Nhà văn phòng mẫu Đan Mạch, ArchiCAD 25, RSB 2nd level.
   size_mb: 73.95
   schema: IFC2X3
   measured:
@@ -789,20 +803,21 @@ files:
       IfcRailing: 2119
       IfcOpeningElement: 245
     length_unit: MILLIMETRE
-    geom_ok_ratio_elements: 0.825
+    geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 91
     geom_ok_ratio_spaces: 1.0
-    open_s: 1.82
-    peak_rss_mb: 545.1
+    open_s: 1.66
+    peak_rss_mb: 545.3
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
-  score: 75.0
+  score: 95.0
   score_detail:
     gt_space_geom: 15.0
     gt_space_storey: 5
     gt_rsb: 10
     gt_rsb_2nd: 5
-    geometry: 0.0
+    geometry: 20.0
     div_storeys: 5
     div_openings: 5
     div_roof: 3
@@ -810,6 +825,7 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 5
+  notes: Nhà văn phòng mẫu Đan Mạch, ArchiCAD 25, RSB 2nd level.
 - id: rwth-digitalhub-with-sb
   path: samples/large/rwth-digitalhub-with-sb.ifc
   tier: M
@@ -821,7 +837,6 @@ files:
   building_class: office
   downloaded_at: '2026-11-10'
   sha256: 2e2da24f35b0a68ef74cf781d3671915691bcc1160bd22c78c78044adf310ffe
-  notes: IFC4 Revit, có IfcRelSpaceBoundary1stLevel và 2ndLevel (lớp con thật) → ground truth IFC4 tốt nhất.
   size_mb: 17.62
   schema: IFC4
   measured:
@@ -863,8 +878,9 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.51
+    open_s: 0.5
     peak_rss_mb: 206.1
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
@@ -882,18 +898,21 @@ files:
     div_space_count: 5
     legal: 15
     building_type: 5
+  notes: IFC4 Revit, có IfcRelSpaceBoundary1stLevel và 2ndLevel (lớp con thật) → ground truth IFC4 tốt nhất.
 - id: ac20-institute-var-2
-  path: samples/corpus_real/ac20-institute-var-2.ifc
+  path: samples/large/ac20-institute-var-2.ifc
   tier: M
   commit: false
-  source: KIT IFC Examples (bản sao trong ThatOpen/engine_web-ifc)
-  url: https://raw.githubusercontent.com/ThatOpen/engine_web-ifc/d2c92aa91bc5e8ebf70ff3f64d363a583cd5503f/tests/ifcfiles/public/C20-Institute-Var-2.ifc
-  license: chưa xác minh — KIT IFC Examples
-  license_class: unknown
+  source: KIT IFC Examples (ifcwiki.org)
+  url: https://www.ifcwiki.org/images/9/98/AC20-Institute-Var-2.ifc
+  license: 'KIT ''for unrestricted use'' — nguyên văn trên https://www.ifcwiki.org/index.php?title=KIT_IFC_Examples: ''These
+    examples are made by the Institute for Applied Computer Science (IAI) at the Karlsruhe Institute of Technology (KIT),
+    and are for unrestricted use. If you use these examples for publications, please provide the following source: Institute
+    for Automation and Applied Informatics (IAI) / Karlsruhe Institute of Technology (KIT)'''
+  license_class: redistributable
   building_class: office
   downloaded_at: '2026-11-10'
   sha256: cfb2124497b25d9a72101075e84be0feb44ff669cb1bd3251be11efebeea945c
-  notes: IFC4 ArchiCAD, viện nghiên cứu 5 tầng, 82 IfcSpace, RSB 2nd level (Description='2a').
   size_mb: 10.93
   schema: IFC4
   measured:
@@ -930,12 +949,13 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 0.29
-    peak_rss_mb: 144.9
+    open_s: 0.32
+    peak_rss_mb: 145.5
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
-  score: 77.0
+  score: 92.0
   score_detail:
     gt_space_geom: 15.0
     gt_space_storey: 5
@@ -947,8 +967,9 @@ files:
     div_roof: 0
     div_other: 2
     div_space_count: 5
-    legal: 0
+    legal: 15
     building_type: 5
+  notes: IFC4 ArchiCAD, viện nghiên cứu 5 tầng, 82 IfcSpace, RSB 2nd level (Description='2a').
 - id: office-a
   path: samples/corpus_real/office-a.ifc
   tier: M
@@ -960,7 +981,6 @@ files:
   building_class: office
   downloaded_at: '2026-11-10'
   sha256: 3ccc7df480d7ae9d1af148d13634fe1af8f1a75949fdf3cb1f87c60464df4700
-  notes: Văn phòng 3 tầng, 99 IfcSpace, RSB 1st level.
   size_mb: 4.1
   schema: IFC2X3
   measured:
@@ -997,6 +1017,7 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
     open_s: 0.09
     peak_rss_mb: 103.6
@@ -1016,6 +1037,7 @@ files:
     div_space_count: 5
     legal: 0
     building_type: 5
+  notes: Văn phòng 3 tầng, 99 IfcSpace, RSB 1st level.
 - id: nus-skolebygg
   path: samples/corpus_real/nus-skolebygg.ifc
   tier: L
@@ -1028,7 +1050,6 @@ files:
   building_class: office
   downloaded_at: '2026-11-10'
   sha256: bd455803048d0dacf4af7de1027beb1968f0727cde38f22bdea65e57484ff121
-  notes: Trường học Na Uy (công trình đông người), Revit 2019, 307 IfcSpace, không RSB.
   size_mb: 56.36
   schema: IFC2X3
   measured:
@@ -1064,9 +1085,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: 1.0
-    open_s: 1.64
-    peak_rss_mb: 497.3
+    open_s: 1.79
+    peak_rss_mb: 497.2
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 65.0
@@ -1083,6 +1105,7 @@ files:
     div_space_count: 5
     legal: 0
     building_type: 5
+  notes: Trường học Na Uy (công trình đông người), Revit 2019, 307 IfcSpace, không RSB.
 - id: holter-tower
   path: samples/corpus_real/holter-tower.ifc
   tier: L
@@ -1097,7 +1120,6 @@ files:
   sha256: d8cc92c00ba634d9f25f3d00185136cbc34f3b14f2cc552634551997ddc148f8
   archive: zip
   archive_member: ISSUE_053_20181220Holter_Tower_10.ifc
-  notes: Tháp 50 tầng IFC4 ArchiCAD 20, 177 MB, ít IfcSpace → test hiệu năng + suy luận IfcSpace.
   size_mb: 177.47
   schema: IFC4
   measured:
@@ -1133,9 +1155,10 @@ files:
     length_unit: MILLIMETRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 4
     geom_ok_ratio_spaces: 1.0
-    open_s: 5.04
-    peak_rss_mb: 1330.9
+    open_s: 5.2
+    peak_rss_mb: 1331.0
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 62.0
@@ -1152,6 +1175,7 @@ files:
     div_space_count: 5
     legal: 0
     building_type: 5
+  notes: Tháp 50 tầng IFC4 ArchiCAD 20, 177 MB, ít IfcSpace → test hiệu năng + suy luận IfcSpace.
 - id: r8-tower
   path: samples/corpus_real/r8-tower.ifc
   tier: L
@@ -1164,7 +1188,6 @@ files:
   building_class: residential
   downloaded_at: '2026-11-10'
   sha256: debf13825f34feef820f6ecfd9d893683be0305b7002b565b47ca01668eee4f5
-  notes: Chung cư cao tầng (Ý) 28 tầng, Revit 2022, 0 IfcSpace → test suy luận IfcSpace trên mặt bằng lặp.
   size_mb: 71.74
   schema: IFC2X3
   measured:
@@ -1200,9 +1223,10 @@ files:
     length_unit: METRE
     geom_ok_ratio_elements: 1.0
     geom_tested_elements: 200
+    n_elements_without_body: 0
     geom_ok_ratio_spaces: null
-    open_s: 2.17
-    peak_rss_mb: 575.9
+    open_s: 2.36
+    peak_rss_mb: 576.1
     ifcopenshell: 0.9.0.post1
     measured_at: '2026-11-10'
   score: 35.0
@@ -1219,6 +1243,291 @@ files:
     div_space_count: 0
     legal: 0
     building_type: 3
+  notes: Chung cư cao tầng (Ý) 28 tầng, Revit 2022, 0 IfcSpace → test suy luận IfcSpace trên mặt bằng lặp.
+- tier: M
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: 26734e67bdc0fd2ab30cb560bddc279a0a4f23eb4d28861509524e4bbe201c48
+  id: kit-smiley-west
+  path: samples/large/kit-smiley-west.ifc
+  source: KIT IFC Examples (ifcwiki.org)
+  url: https://www.ifcwiki.org/images/c/c8/AC-20-Smiley-West-10-Bldg.zip
+  license: 'KIT ''for unrestricted use'' — nguyên văn trên https://www.ifcwiki.org/index.php?title=KIT_IFC_Examples: ''These
+    examples are made by the Institute for Applied Computer Science (IAI) at the Karlsruhe Institute of Technology (KIT),
+    and are for unrestricted use. If you use these examples for publications, please provide the following source: Institute
+    for Automation and Applied Informatics (IAI) / Karlsruhe Institute of Technology (KIT)'''
+  license_class: redistributable
+  building_class: residential
+  archive: zip
+  archive_member: AC-20-Smiley-West-10-Bldg.ifc
+  notes: Dãy nhà liền kề IFC4 ArchiCAD 20, 140 IfcSpace, 1689 RSB (có VIRTUAL). Zenodo có bản 'KIT Smiley West corrected'
+    (10.5281/zenodo.10680698) chưa dùng.
+  size_mb: 6.11
+  schema: IFC4
+  measured:
+    n_storeys: 5
+    n_spaces: 140
+    n_spaces_with_rep: 140
+    n_spaces_in_storey: 140
+    n_rsb: 1689
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 1689
+    n_rsb_with_geom: 1689
+    n_rsb_virtual: 123
+    n_rsb_external: 649
+    n_rsb_with_corresponding: 0
+    rsb_level_labels:
+      2ndLevel|2a: 1689
+    n_products: 1272
+    n_zones: 0
+    counts:
+      IfcWall: 281
+      IfcSlab: 120
+      IfcRoof: 0
+      IfcCovering: 0
+      IfcColumn: 20
+      IfcBeam: 10
+      IfcDoor: 170
+      IfcWindow: 80
+      IfcCurtainWall: 0
+      IfcStair: 30
+      IfcRamp: 0
+      IfcRailing: 120
+      IfcOpeningElement: 280
+    length_unit: METRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 200
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 0.19
+    peak_rss_mb: 115.1
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 90.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 10
+    gt_rsb_2nd: 5
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 0
+    div_other: 2
+    div_space_count: 5
+    legal: 15
+    building_type: 3
+- tier: L
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: 05919eee0701b955d3d08501c4889c879d9c486e2389a6a1a5cdaad32a5d10ba
+  id: taltech-ds3
+  path: samples/large/taltech-ds3.ifc
+  source: Zenodo 10.5281/zenodo.15782433 — SmartlivingEPC public building BIM model and measurements
+  url: https://zenodo.org/api/records/15782433/files/DS3_TalTech_V4.ifc/content
+  license: CC BY 4.0 — metadata license 'cc-by-4.0' của record Zenodo 15782433
+  license_class: redistributable
+  building_class: office
+  notes: Toà văn phòng + phòng thí nghiệm Đại học TalTech (Tallinn), IFC4, 115 IfcSpace, 1927 RSB → ground truth công trình
+    công cộng thật.
+  size_mb: 38.73
+  schema: IFC4
+  measured:
+    n_storeys: 5
+    n_spaces: 115
+    n_spaces_with_rep: 115
+    n_spaces_in_storey: 115
+    n_rsb: 1927
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 0
+    n_rsb_with_geom: 1927
+    n_rsb_virtual: 77
+    n_rsb_external: 263
+    n_rsb_with_corresponding: 0
+    rsb_level_labels:
+      1stLevel|: 1927
+    n_products: 5530
+    n_zones: 2
+    counts:
+      IfcWall: 399
+      IfcSlab: 64
+      IfcRoof: 11
+      IfcCovering: 879
+      IfcColumn: 102
+      IfcBeam: 2
+      IfcDoor: 119
+      IfcWindow: 122
+      IfcCurtainWall: 30
+      IfcStair: 29
+      IfcRamp: 0
+      IfcRailing: 2
+      IfcOpeningElement: 925
+    length_unit: METRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 200
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 0.94
+    peak_rss_mb: 340.5
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 90.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 10
+    gt_rsb_2nd: 0
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 3
+    div_other: 2
+    div_space_count: 5
+    legal: 15
+    building_type: 5
+- tier: L
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: 7850c4d909b41dc439feed2e76ffe507c0b472b04513b1ede9e1deec90c503c1
+  id: gni-model-6-arc
+  path: samples/large/gni-model-6-arc.ifc
+  source: Zenodo 10.5281/zenodo.19722012 — GNI BIM Dataset (TUM), 2026_BIMprojects.zip
+  url: https://zenodo.org/api/records/19722012/files/2026_BIMprojects.zip/content
+  license: 'CC BY 4.0 — LICENSE trong record Zenodo 10.5281/zenodo.19722012: ''The contents of this dataset are licensed under
+    the Creative Commons Attribution 4.0 International Public License (CC BY 4.0)'' (Copyright (C) 2026 Zijian Wang et al.,
+    TUM Georg Nemetschek Institute)'
+  license_class: redistributable
+  building_class: office
+  archive: zip
+  archive_member: 2026_BIMprojects/model_6_arc.ifc
+  notes: 'File kiến trúc lớn nhất trong bộ (đồ án sinh viên, Revit 2026, IFC2X3, 11 tầng): test hiệu năng/RAM. Script tải
+    zip 221 MB rồi giải nén một thành viên. README GNI ghi file ~536 MB không load được trên máy họ; IfcOpenShell 0.9 mở được.'
+  size_mb: 561.84
+  schema: IFC2X3
+  measured:
+    n_storeys: 11
+    n_spaces: 46
+    n_spaces_with_rep: 46
+    n_spaces_in_storey: 46
+    n_rsb: 0
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 0
+    n_rsb_with_geom: 0
+    n_rsb_virtual: 0
+    n_rsb_external: 0
+    n_rsb_with_corresponding: 0
+    rsb_level_labels: {}
+    n_products: 981
+    n_zones: 0
+    counts:
+      IfcWall: 137
+      IfcSlab: 27
+      IfcRoof: 0
+      IfcCovering: 0
+      IfcColumn: 106
+      IfcBeam: 43
+      IfcDoor: 29
+      IfcWindow: 19
+      IfcCurtainWall: 11
+      IfcStair: 0
+      IfcRamp: 0
+      IfcRailing: 7
+      IfcOpeningElement: 64
+    length_unit: METRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 200
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 14.75
+    peak_rss_mb: 3120.8
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 77.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 0
+    gt_rsb_2nd: 0
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 0
+    div_other: 2
+    div_space_count: 5
+    legal: 15
+    building_type: 5
+- tier: M
+  commit: false
+  downloaded_at: '2026-11-10'
+  sha256: eadf7f6d669333d09a1cf703802b0578ef645aa0092cb331777b77e11608224c
+  id: bimedit-1fd06ad21e9e
+  path: samples/large/bimedit-1fd06ad21e9e.ifc
+  source: Hugging Face dataset BIM-Edit/BIM-Edit (complex/)
+  url: https://huggingface.co/datasets/BIM-Edit/BIM-Edit/resolve/main/complex/1fd06ad21e9e.ifc
+  license: CC BY 4.0 — tag 'license:cc-by-4.0' và front-matter README của https://huggingface.co/datasets/BIM-Edit/BIM-Edit
+  license_class: redistributable
+  building_class: large_public
+  notes: IFC4X3, toà giảng đường/viện (Hörsaal, Seminar, Labor, Büro), 36 IfcSpace, 360 RSB. URL dùng nhánh main (không ghim
+    commit) → có thể đổi; sha256 bắt lỗi.
+  size_mb: 5.26
+  schema: IFC4X3
+  measured:
+    n_storeys: 4
+    n_spaces: 36
+    n_spaces_with_rep: 36
+    n_spaces_in_storey: 36
+    n_rsb: 360
+    n_rsb_1st_class: 0
+    n_rsb_2nd_class: 0
+    n_rsb_name_2ndlevel: 0
+    n_rsb_with_geom: 360
+    n_rsb_virtual: 7
+    n_rsb_external: 81
+    n_rsb_with_corresponding: 0
+    rsb_level_labels:
+      1stLevel|: 360
+    n_products: 1073
+    n_zones: 0
+    counts:
+      IfcWall: 94
+      IfcSlab: 5
+      IfcRoof: 2
+      IfcCovering: 0
+      IfcColumn: 0
+      IfcBeam: 0
+      IfcDoor: 32
+      IfcWindow: 33
+      IfcCurtainWall: 5
+      IfcStair: 2
+      IfcRamp: 0
+      IfcRailing: 7
+      IfcOpeningElement: 79
+    length_unit: METRE
+    geom_ok_ratio_elements: 1.0
+    geom_tested_elements: 164
+    n_elements_without_body: 0
+    geom_ok_ratio_spaces: 1.0
+    open_s: 0.13
+    peak_rss_mb: 135.0
+    ifcopenshell: 0.9.0.post1
+    measured_at: '2026-11-10'
+  score: 93.0
+  score_detail:
+    gt_space_geom: 15.0
+    gt_space_storey: 5
+    gt_rsb: 10
+    gt_rsb_2nd: 0
+    geometry: 20.0
+    div_storeys: 5
+    div_openings: 5
+    div_roof: 3
+    div_other: 2
+    div_space_count: 5
+    legal: 15
+    building_type: 8
 - id: otc-conference-center
   path: samples/corpus_real/otc-conference-center-ifc4.ifc
   tier: null
