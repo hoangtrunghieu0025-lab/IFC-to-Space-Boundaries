@@ -88,16 +88,27 @@ def boundary_stats(f) -> dict:
     rsb = f.by_type("IfcRelSpaceBoundary")
     st = {
         "n_rsb": len(rsb),
-        "n_rsb_1st_class": safe_count(f, "IfcRelSpaceBoundary1stLevel"),
+        # IfcRelSpaceBoundary2ndLevel là lớp con của IfcRelSpaceBoundary1stLevel (IFC4),
+        # nên đếm 1stLevel "thuần" = by_type(1stLevel) - by_type(2ndLevel).
+        "n_rsb_1st_class": safe_count(f, "IfcRelSpaceBoundary1stLevel") - safe_count(f, "IfcRelSpaceBoundary2ndLevel"),
         "n_rsb_2nd_class": safe_count(f, "IfcRelSpaceBoundary2ndLevel"),
-        "n_rsb_name_2ndlevel": 0,  # quy ước IFC2x3 CV2.0: Name='2ndLevel' (chưa xác minh với mọi exporter)
+        # Nhãn level do exporter ghi trong Name/Description (không chuẩn hoá giữa các phần mềm, chưa xác minh
+        # với mọi exporter): Revit '1stLevel'/'2ndLevel', ArchiCAD 'Second Level' hoặc Description '2a'/'2b'.
+        "n_rsb_name_2ndlevel": 0,
+        "rsb_level_labels": {},
         "n_rsb_with_geom": 0,
         "n_rsb_virtual": 0,
         "n_rsb_external": 0,
         "n_rsb_with_corresponding": 0,
     }
+    labels: dict[str, int] = {}
     for b in rsb:
-        if (b.Name or "").lower().startswith("2nd"):
+        name = (b.Name or "").strip()
+        desc = (b.Description or "").strip()
+        key = f"{name}|{desc}"
+        labels[key] = labels.get(key, 0) + 1
+        nl = name.lower().replace(" ", "")
+        if nl.startswith("2nd") or nl.startswith("secondlevel") or desc.lower() in ("2a", "2b"):
             st["n_rsb_name_2ndlevel"] += 1
         if b.ConnectionGeometry is not None:
             st["n_rsb_with_geom"] += 1
@@ -107,6 +118,7 @@ def boundary_stats(f) -> dict:
             st["n_rsb_external"] += 1
         if getattr(b, "CorrespondingBoundary", None) is not None:
             st["n_rsb_with_corresponding"] += 1
+    st["rsb_level_labels"] = dict(sorted(labels.items(), key=lambda kv: -kv[1])[:6])
     return st
 
 

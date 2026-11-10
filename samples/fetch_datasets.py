@@ -9,6 +9,8 @@ Ví dụ (chạy từ gốc repo):
     python3 samples/fetch_datasets.py --id bsst-ifc4-building-architecture
 
 Mã thoát khác 0 nếu có file thiếu / sai sha256 / tải lỗi.
+Mục có `archive: zip` được giải nén thành viên `archive_member` ra `path`
+(sha256 trong manifest là của file .ifc sau giải nén).
 Mục có `manual: true` (cần đăng nhập, bị chặn tải tự động) chỉ in hướng dẫn tải tay.
 """
 from __future__ import annotations
@@ -20,6 +22,7 @@ import shutil
 import sys
 import tempfile
 import urllib.request
+import zipfile
 
 import yaml  # pip install pyyaml
 
@@ -80,7 +83,16 @@ def main() -> int:
             continue
         try:
             print(f"GET      {e['id']}  <- {e['url']}")
-            download(e["url"], dest)
+            if e.get("archive") == "zip":
+                # tải file nén (ví dụ .ifczip) rồi giải nén đúng một thành viên ra `path`
+                zdest = dest + ".zip"
+                download(e["url"], zdest)
+                with zipfile.ZipFile(zdest) as z, open(dest, "wb") as out:
+                    with z.open(e["archive_member"]) as src:
+                        shutil.copyfileobj(src, out, 1 << 20)
+                os.remove(zdest)
+            else:
+                download(e["url"], dest)
         except Exception as ex:  # noqa: BLE001
             print(f"ERROR    {e['id']}: {type(ex).__name__}: {ex}")
             bad += 1
