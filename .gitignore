@@ -10,3 +10,6 @@ __pycache__/
 
 # file IFC thật tải về, giấy phép không rõ: chỉ dùng cục bộ, KHÔNG commit
 samples/corpus_real/
+
+# bộ dữ liệu IFC lớn (tầng L), không commit; xem samples/manifest.yaml
+samples/large/
