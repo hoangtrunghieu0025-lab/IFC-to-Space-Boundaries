@@ -52,3 +52,4 @@
 | BIMData R&D IFC_FILES.md — đánh giá toàn bộ 97 file (đã đọc; danh mục, không có LICENSE) | https://github.com/bimdata/BIMData-Research-and-Development/blob/master/pages/IFC_FILES.md | datasets (TASK-001) | 2026-11-10 |
 | HITOS_070308.ifc (opensourceBIM TestFiles; bản sao SGD HiTOS) | https://github.com/opensourceBIM/TestFiles/blob/master/TestData/data/HITOS_070308.ifc | datasets (TASK-001) | 2026-11-10 |
 | NISTIR 7687 — BPEA test suite (định nghĩa 2LSB loại 2a/2b; đã tải, đọc trích đoạn) | https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7687.pdf | graph-topology (TASK-002), datasets | 2026-11-10 |
+| Golla — poster Evaluation of Semi-Automated BIM-BEM Data Transfer Tool BIM2SIM (UCD/Tulsa; đọc bản tải tay vì HTTP 403) | https://www.ucd.ie/eacollege/t4media/Benjamin-Golla_University-of-Tulsa.pdf | graph-topology (TASK-002) | 2026-11-10 |

@@ -65,7 +65,7 @@ Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluat
 - Máy: Linux, 14 CPU, 15 GB RAM, không có `cmake`, OpenCASCADE, IfcOpenShell; có Docker 29.9.3.
 - Dockerfile gốc (`add/Dockerfile`) dựa Ubuntu 20.04, OCC 7.5.3 lấy từ repo bên thứ ba `bimworld/occ`, `qt5-default`; **mình không dùng repo bên thứ ba** mà viết lại Dockerfile lấy OCCT 7.5.3 từ GitHub chính thức `Open-Cascade-SAS/OCCT` (tag `V7_5_3`) và IfcOpenShell tag `v0.6.0`, file ở thư mục scratchpad của phiên (`.../scratchpad/ifc2sb-docker/Dockerfile`).
 - Lệnh: `docker build -t ifc2sb-test .` (chạy nền). **Trạng thái tại thời điểm viết: chưa xong**; bước kéo ảnh nền Ubuntu 20.04 chỉ đạt khoảng 19/27 MB sau ~3 phút (mạng chậm), các bước biên dịch OCCT và IfcOpenShell chưa bắt đầu. **Chưa có kết quả cài đặt hay chạy: chưa kiểm chứng.**
-- Rủi ro đã biết: bài trình bày ở Univ. of Tulsa báo cài IFC2SB thất bại ("critical failure") trên mô hình RWTH Digital Hub; mình chưa tái lập được. [S4]
+- Rủi ro đã biết: poster của Golla (UCD, logo Univ. of Tulsa) báo lỗi **cài đặt** IFC2SB: thiếu Qt5, OpenCASCADE, IfcOpenShell, JSON for Modern C++, OpenCOLLADA và lỗi giao tiếp Docker Desktop–WSL; build dừng ở một lỗi C++ nghiêm trọng **chưa giải quyết**, nguyên nhân poster không nêu. Kết luận gốc: "installation process resulted in critical failure due to recurring issues with the exchange of information (dependencies, libraries, etc.)… exacerbated by limited documentation". Poster **không** báo IFC2SB sinh sai boundary trên Digital Hub vì không chạy tới bước đó. [S4] [sửa bởi claude-02, 2026-11-10: trước đây ghi nhầm là 'thất bại trên mô hình RWTH Digital Hub'.] Đối chiếu với lần build của mình (mục dưới): cũng gặp thiếu Qt5, và thêm thiếu CGAL (README không liệt kê); build thành công sau khi thêm `qt5-default` và `libcgal-dev`.
 - File IFC4 nhỏ để thử: `AC20-FZK-Haus.ifc` (2,5 MB, IFC4, nguồn KIT). [sửa bởi claude-01, 2026-11-10: TASK-001 đã tìm được nguồn chính thức (ifcwiki, KIT "for unrestricted use"); file ở `samples/small/ac20-fzk-haus.ifc`.]
 
 ## 7. Vì sao hợp / không hợp với dự án
@@ -90,7 +90,7 @@ Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluat
 
 ## Chưa xác minh / việc còn lại
 - Luận án Fichter 2022 (chi tiết graph, thử nghiệm, hiệu năng): **BLOCKED** vì trang RWTH có thử thách JavaScript chống bot. Nhờ người dùng tải PDF từ https://publications.rwth-aachen.de/record/856693 và đặt vào `samples/corpus_real/` hoặc thư mục cục bộ, rồi agent đọc tiếp.
-- Kết quả build Docker và chạy thử trên IFC4 nhỏ; lỗi (nếu có) so với báo cáo của Tulsa.
+- Build Docker 4 giai đoạn (`~/ifc2sb-docker`, ngoài repo; Ubuntu 20.04 → OCCT 7.5.3 → IfcOpenShell v0.6.0 → IFC2SB; giai đoạn cuối thêm `qt5-default`, `libcgal-dev`) thành công 2026-11-10. Chạy `IFC2SB -j4 --graph samples/small/ac20-fzk-haus.ifc` (IFC4): thành công, ~25 s; đầu ra `IfcSpace` 7→4, `IfcRelSpaceBoundary` 81→1095 (1st 131, 2a 480, 2b 484, 480 có `CorrespondingBoundary`), đếm bằng IfcOpenShell. Chưa phân tích nguyên nhân space giảm 7→4 và số 2b lớn; chưa chạy trên RWTH Digital Hub: chưa kiểm chứng.
 - IFC2SB có hỗ trợ IFC2x3 không.
 - Hành vi trên mô hình lớn, mặt cong, mái dốc; giới hạn khe hở thực tế khi offset tắt.
 - Tác động của GPL/LGPL mâu thuẫn.
@@ -99,4 +99,4 @@ Khớp với bài báo: "Boolean intersection of the faces and adjacency evaluat
 - [S1] https://github.com/RWTH-E3D/IFC2SB — clone `96a89cdff6`, đọc `README.md`, `LICENSE`, `src/main.cpp`, `src/Graph.cpp`, `src/Kernel.cpp`, `src/graph_2D.h`, `cmake/CMakeLists.txt`, `add/Dockerfile` (truy cập 2026-11-10)
 - [S2] https://publications.rwth-aachen.de/record/856693 — trang luận án; DOI chuyển hướng đúng (truy cập 2026-11-10); nội dung bị chặn bởi thử thách JavaScript, chưa đọc
 - [S3] Fichter, Richter, Frisch, van Treeck (2021), *Automatic generation of second level space boundary geometry from IFC models*, IBPSA BS2021. https://publications.ibpsa.org/proceedings/bs/2021/papers/bs2021_30156.pdf (đã đọc toàn văn, 2026-11-10)
-- [S4] B. Golla, Univ. of Tulsa: https://www.ucd.ie/eleceng/t4media/Benjamin-Golla_University-of-Tulsa.pdf (chỉ thấy qua kết quả tìm kiếm, chưa mở)
+- [S4] B. Golla (UCD School of Mechanical and Materials Engineering; mentor Dr. James O'Donnell; logo Univ. of Tulsa), poster *Evaluation of Semi-Automated BIM-BEM Data Transfer Tool BIM2SIM*, https://www.ucd.ie/eacollege/t4media/Benjamin-Golla_University-of-Tulsa.pdf. Máy chủ trả HTTP 403 cho truy cập tự động; **đã đọc toàn văn** bản người dùng tải tay (2026-11-10, poster 1 trang, không ghi ngày/nơi trình bày). Không commit PDF (giấy phép chưa rõ).

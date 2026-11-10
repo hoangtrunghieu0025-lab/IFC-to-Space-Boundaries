@@ -21,7 +21,6 @@
 |---|---|---|
 | `CreateSpaceBoundaries` (`sb_creation.py`) | Lọc `IfcRelSpaceBoundary` (`TypeFilter(('IfcRelSpaceBoundary',))`, dòng 56) và dựng đối tượng `SpaceBoundary`; gán phần tử cha, cửa/lỗ mở (`get_parents_and_children`, dòng 132, `opening_area_tolerance=0.01`). **Bỏ qua boundary là lớp `IfcRelSpaceBoundary1stLevel` hoặc có `Name == '1stLevel'`** (dòng 393-395); boundary trên `IfcExternalSpatialElement` chỉ được giữ khi bật `create_external_elements` | docstring: "Create space boundaries for elements from IfcRelSpaceBoundary" |
 | `AddSpaceBoundaries2B` (`sb_2b_generation.py`) | **Sinh hình học 2b**: lấy hình `space_shape` của **`IfcSpace` có sẵn** (`bps_elements.py:234-245`), trừ dần (`BRepAlgoAPI_Cut`, dòng 118) các boundary nằm sát hình space (khoảng cách ≤ 1e-6, dòng 115). Mỗi mặt còn lại thành một `SpaceBoundary2B`. Bỏ qua space nếu diện tích mặt space trừ tổng diện tích boundary < 1e-2 (dòng 101; ngưỡng tuyệt đối, đơn vị chưa kiểm chứng). Lỗi bất kỳ thì chỉ ghi warning và không thêm 2b (dòng 63) | Docstring dòng 79: mặt dư được gán loại 2b "for simplicity", chưa xác minh 2a hay 2b |
-| `CorrectSpaceBoundaries` (`sb_correction.py`) | `fix_surface_orientation` (172), `move_children_to_parents` (114), `split_non_convex_bounds` (267), `add_and_split_bounds_for_shadings` (88) | tên hàm; thuật toán mô tả trong Richter et al. 2021 (Forum Bauinformatik), **chưa đọc** |
 | Thứ tự plugin EnergyPlus | `CreateSpaceBoundaries`, `AddSpaceBoundaries2B`, `CorrectSpaceBoundaries` | `plugins/PluginEnergyPlus/bim2sim_energyplus/__init__.py:20-22` |
 | Giá trị mặc định | `BaseSimSettings`: `add_space_boundaries`, `correct_space_boundaries`, `close_space_boundary_gaps` đều `False` (`sim_settings.py:447-462`). `BuildingSimSettings`: `add_space_boundaries=True` (dòng 945). Plugin EnergyPlus: `correct_space_boundaries=True`, `close_space_boundary_gaps=True` (`PluginEnergyPlus/bim2sim_energyplus/sim_settings.py:180-189`) | **Với EnergyPlus, mặc định cả ba bước đều chạy, kể cả sinh 2b** |
 
@@ -90,7 +89,6 @@ Ghi chú liên quan đến hướng D trong `approach-critique.md`.
 
 ## Chưa xác minh / việc còn lại
 - **Chưa chạy bim2sim end-to-end** (cần conda + `pythonocc-core`); chưa biết nó chịu được IFC lớn không.
-- Chưa đọc Richter et al. 2021 (Forum Bauinformatik, https://tuprints.ulb.tu-darmstadt.de/21521/): bài mô tả thuật toán trong `sb_correction.py`. Đã mở mạng (2026-11-10) nhưng trang có thử thách chống bot Anubis, không vượt qua; chưa thấy bản công khai khác. **BLOCKED**, cần tải tay.
 - Chưa đọc Jansen et al. 2021 (BIM2SIM, IBPSA BS2021, DOI 10.26868/25222708.2021.30228).
 - Đơn vị của ngưỡng 1e-2 trong `_compute_2b_bound_gaps`; nguồn gốc của "webtool".
 - Chưa kiểm tra plugin OpenFOAM dùng IFC2SB ở bước nào ngoài file test.
