@@ -5,7 +5,7 @@ category: MAIN
 assignees: [claude-01]
 created_by: user
 created_at: 2026-11-10T11:42:16+07:00
-updated_at: 2026-11-10T15:26:31+07:00
+updated_at: 2026-11-10T16:05:40+07:00
 status: in_review
 priority: high
 depends_on: []
@@ -103,10 +103,11 @@ Người dùng đang làm **digital twin cho sân vận động 80.000 chỗ ng�
 | 2026-11-10T12:22:46+07:00 | in_review | Báo cáo **PARTIAL**. File: research/04-downstream-validation/{dataset-quality-criteria,dataset-survey}.md; samples/{manifest.yaml,fetch_datasets.py,inspect_ifc.py,update_manifest.py,README.md}; samples/small/ (8 IFC + NOTICE.md). Lệnh: fetch_datasets.py (22 file từ URL ghim commit), update_manifest.py (đo toàn bộ), fetch_datasets.py --force --tier S → "Tất cả khớp", --check → 22 OK + 1 MISSING (OTC, manual). Kết quả: 9 S / 5 M / 8 L; 14 file có RSB ground truth (9 file 2nd level). Còn mở: xem Blocker |
 | 2026-11-10T12:28:00+07:00 | in_review | (đồng bộ sau pull) Thư mục `research/04-downstream-validation/` đã đổi tên thành `research/04-datasets-and-validation/`; đã chuyển `dataset-quality-criteria.md`, `dataset-survey.md` và sửa đường dẫn trong `samples/` |
 | 2026-11-10T15:26:31+07:00 | in_review | Thêm `research/04-datasets-and-validation/dataset-search-log.md` (nhật ký mọi link/truy vấn đã tìm, kể cả nơi thất bại) và `raw/` (4 báo cáo thô của subagent) theo yêu cầu người dùng |
+| 2026-11-10T16:05:40+07:00 | in_review | Người dùng quyết định **bỏ hướng dựng sân vận động tổng hợp**; đã xoá đề xuất này khỏi dataset-survey.md, dataset-search-log.md, raw/survey-large-ifc.md và mục Blocker |
 
 ## Blocker / câu hỏi mở
 - Danh sách nguồn chưa có URL; có nguồn có thể cần đăng nhập hoặc chặn tải tự động (Bibliocad, GrabCAD, Revit Sample): nếu bị chặn thì ghi BLOCKED và nhờ người dùng tải tay.
-- (claude-01) **Không có IFC sân vận động công khai** (đã tìm trên GitHub, Zenodo, các danh sách dataset, WebSearch EN/FR/DE). Cần người dùng chọn: dựng sân vận động tổng hợp bằng IfcOpenShell (đề xuất tạo task mới) hay cung cấp model thật (để trong `samples/corpus_real/`).
+- (claude-01) **Không có IFC sân vận động công khai** (đã tìm trên GitHub, Zenodo, các danh sách dataset, WebSearch EN/FR/DE). **Quyết định của người dùng (2026-11-10): không dựng model sân vận động tổng hợp.** Chỉ còn chờ model thật nếu người dùng có (để trong `samples/corpus_real/`).
 - (claude-01) **OTC Conference Center / West Riverside Hospital** (openifcmodel.cs.auckland.ac.nz) bị chặn từ container: nhờ người dùng tải tay (hướng dẫn trong manifest, mục `otc-conference-center`).
 - (claude-01) Cần người dùng cho URL của "OpenFloorPlan" và "DWGFree" (không tìm thấy).
 - (claude-01) Tuỳ chọn: mở CDN `us.aws.cdn.hf.co` để tải model BIM-Edit lớn (tới 349 MB, CC BY 4.0).

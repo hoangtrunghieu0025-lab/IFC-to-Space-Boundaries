@@ -77,10 +77,11 @@ Lý do phải tìm thêm: các nguồn ban đầu **không có IFC công trình 
 | WebSearch EN/FR/DE ("stadium .ifc download", "Stadion IFC-Modell", "stade maquette IFC"…) | Chỉ có object IFC lẻ (ghế, khung thành), model thương mại không phải IFC, và ATC-75 (model kết cấu cắt từ một sân vận động, chỉ có PDF mô tả, không có link tải, không có `IfcSpace`). |
 | CAD (dwgmodels, designscad, cadforum, cgtrader) [SNIPPET] | Có DWG sân vận động (cả Amsterdam Arena), nhưng là 2D, không có ngữ nghĩa phòng. cadforum cấm tái phân phối, cgtrader là hàng trả phí. |
 
-**Nhận định**: model BIM của sân vận động thật thường là tài sản của chủ đầu tư hoặc nhà thầu (an ninh, NDA). Đây là suy luận, chưa xác minh. Đề xuất cho người dùng:
+**Nhận định**: model BIM của sân vận động thật thường là tài sản của chủ đầu tư hoặc nhà thầu (an ninh, NDA). Đây là suy luận, chưa xác minh. Hướng xử lý:
 - (a) dùng các file thay thế đã chọn;
-- (b) tự dựng một **sân vận động tổng hợp** bằng IfcOpenShell (khán đài, hành lang vòng, nhiều nghìn `IfcSpace`) làm ca test có ground truth biết trước;
-- (c) dùng model thật của dự án digital twin 80.000 chỗ nếu người dùng có quyền, để trong `samples/corpus_real/`.
+- (b) dùng model thật của dự án digital twin 80.000 chỗ nếu người dùng có quyền, để trong `samples/corpus_real/`.
+
+**Quyết định của người dùng (2026-11-10): không dựng model sân vận động tổng hợp.**
 
 ### 5. Bộ file đã chọn (trích từ `samples/manifest.yaml`)
 
@@ -165,7 +166,7 @@ python3 samples/fetch_datasets.py --check     # 22 OK, 1 MISSING (otc-conference
 
 ## Câu hỏi còn mở
 1. **OTC Conference Center / West Riverside Hospital**: người dùng có tải tay được từ http://openifcmodel.cs.auckland.ac.nz/ không? Nếu được, đặt vào `samples/corpus_real/` và chạy `update_manifest.py --id otc-conference-center`. Cần xác minh giấy phép trên trang gốc.
-2. **Sân vận động**: chọn hướng (b) dựng model tổng hợp (đề xuất thành task mới) hay (c) dùng model thật của người dùng?
+2. **Sân vận động**: người dùng có model thật để đưa vào `samples/corpus_real/` không?
 3. "OpenFloorPlan" và "DWGFree" trong danh sách là nguồn nào (URL)?
 4. Có mở thêm CDN `us.aws.cdn.hf.co` để tải các model BIM-Edit lớn (tới 349 MB, CC BY 4.0) không?
 5. Giấy phép gốc của NIBS Common BIM Files (`office-a`), KIT bản AC11 (`ac11-fzk-haus`) và các file ara3d vẫn chưa xác minh.

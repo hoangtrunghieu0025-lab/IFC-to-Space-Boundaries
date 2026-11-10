@@ -161,7 +161,7 @@ Số liệu trong `raw/` là do subagent đo. Số liệu chính thức là bả
 
 ## Liên quan đến pipeline IFC → Space Boundaries
 - Là danh mục nguồn để bổ sung dữ liệu khi pipeline cần thêm ca test (nhất là công trình đông người và 2nd-level boundary).
-- Nếu sau này cần ca test sân vận động, phải tự dựng model tổng hợp hoặc dùng model của người dùng: không còn nguồn công khai nào để tìm thêm theo các kênh ở mục 6.
+- Nếu sau này cần ca test sân vận động, chỉ còn cách dùng model của người dùng: không còn nguồn công khai nào để tìm thêm theo các kênh ở mục 6. **Quyết định của người dùng (2026-11-10): không dựng model sân vận động tổng hợp.**
 
 ## Nguồn
 - Toàn bộ link ở mục 2–6, truy cập 2026-11-10. Các nguồn chính đã được thêm vào `research/sources.md`.

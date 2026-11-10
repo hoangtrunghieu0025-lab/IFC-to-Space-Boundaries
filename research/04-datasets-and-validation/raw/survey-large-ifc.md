@@ -80,8 +80,9 @@ Gợi ý mở host theo thứ tự lợi ích: **openifcmodel.cs.auckland.ac.nz*
 
 **Kết luận về sân vận động:** chưa có file IFC sân vận động/arena công khai nào tải được. Lý do hợp lý: model sân vận động thật là tài sản của chủ đầu tư hoặc nhà thầu (bảo mật an ninh, NDA), còn các bản "demo" công khai thường ở dạng mesh (glb/obj) dùng cho trình diễn digital twin. Hướng đi đề xuất cho tầng L:
 (a) Dùng công trình đông người thay thế: hội trường OTC hoặc bệnh viện West Riverside (cần mở openifcmodel), trường học NUS skolebygg, tháp Holter hoặc R8 để thử tải quy mô.
-(b) Tự dựng một **sân vận động tổng hợp** bằng IfcOpenShell hoặc Bonsai (khán đài dạng vòng, concourse, phòng kỹ thuật, nhiều nghìn IfcSpace). Có thể tham khảo hình học từ ATSmithPB/_Stadium_Tools.
-(c) Xin model thật từ đối tác của người dùng.
+(b) Xin model thật từ đối tác của người dùng.
+
+> [claude-01, 2026-11-10] Đã xoá khỏi bản thô này một đề xuất dựng model tổng hợp. **Quyết định của người dùng (2026-11-10): không dựng model sân vận động tổng hợp.**
 
 ## 4. Xếp hạng đề xuất cho tầng L
 
