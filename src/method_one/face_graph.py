@@ -200,7 +200,7 @@ def group_faces_by_edge(air_faces: list[AirFace]) -> dict:
     for face_index, face in enumerate(air_faces):
         following_points = np.roll(face.points, -1, axis=0)
 
-        # zip: duyệt song song từng cặp đỉnh liên tiếp (start, end) tức từng cạnh của mảnh
+        # duyệt song song từng cặp đỉnh liên tiếp (start, end) tức từng cạnh của mảnh
         for start, end in zip(face.points, following_points):
             along = end - start
             length = np.linalg.norm(along)

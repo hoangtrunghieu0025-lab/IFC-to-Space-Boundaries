@@ -1,0 +1,29 @@
+{
+  "default_timeout_minutes": 60,
+  "cases": [
+    {
+      "id": "duplex-a",
+      "title": "Mẫu nhỏ duplex-a (kiểm tra nhanh bộ đánh giá)",
+      "ifc": "../samples/small/duplex-a.ifc",
+      "timeout_minutes": 15
+    },
+    {
+      "id": "tnp-vsf-tang-ham",
+      "title": "TNP-VSF-A, tầng hầm",
+      "ifc": "data/TNP-VSF-A-TANG HAM.ifc",
+      "timeout_minutes": 120
+    },
+    {
+      "id": "tnp-vsf-tang-mai",
+      "title": "TNP-VSF-A, tầng mái",
+      "ifc": "data/TNP-VSF-A-TANG MAI.ifc",
+      "timeout_minutes": 120
+    },
+    {
+      "id": "tnp-vsf-tang-7-19",
+      "title": "TNP-VSF-A, tầng 7 đến 19",
+      "ifc": "data/TNP-VSF-A-_TANG 7-19.ifc",
+      "timeout_minutes": 120
+    }
+  ]
+}
