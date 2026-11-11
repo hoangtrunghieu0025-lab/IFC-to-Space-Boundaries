@@ -1,0 +1,32 @@
+2026-11-11 17:51:01,784 INFO    graph_topology: Run folder: out/runs/2026-11-11_175101_duplex-a
+2026-11-11 17:51:01,784 INFO    graph_topology: Step read_ifc started
+2026-11-11 17:51:02,253 WARNING read_elements: No geometry for IfcRoof 0jf0rYHfX3RAB3bSIRjmxl: No suitable IfcRepresentation found
+2026-11-11 17:51:02,423 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDocD
+2026-11-11 17:51:02,435 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDoy2
+2026-11-11 17:51:02,468 INFO    read_elements: Read geometry of 128 bounding elements, 2 had flipped normals
+2026-11-11 17:51:02,468 INFO    graph_topology: Step read_ifc done in 0.7 s
+2026-11-11 17:51:02,468 INFO    graph_topology: Schema IFC2X3, 128 bounding elements, 7032 triangles, 21 original IfcSpace
+2026-11-11 17:51:02,468 INFO    graph_topology: Step fuse started
+2026-11-11 17:51:02,468 INFO    graph_topology: Reusing fused faces from out/duplex_fused_v2.pkl
+2026-11-11 17:51:02,541 INFO    graph_topology: Step fuse done in 0.1 s
+2026-11-11 17:51:02,541 INFO    graph_topology: Step air_faces started
+2026-11-11 17:51:02,714 INFO    face_graph: 6346 faces face the air, 5276 were contact faces between two solids
+2026-11-11 17:51:02,714 INFO    graph_topology: Step air_faces done in 0.2 s
+2026-11-11 17:51:02,714 INFO    graph_topology: Step buried_faces started
+2026-11-11 17:51:03,022 INFO    buried_faces: Removed 2485 buried faces
+2026-11-11 17:51:03,022 INFO    graph_topology: Step buried_faces done in 0.3 s
+2026-11-11 17:51:03,022 INFO    graph_topology: Step link_faces started
+2026-11-11 17:51:03,253 INFO    face_graph: Found 15 groups of faces
+2026-11-11 17:51:03,258 INFO    graph_topology: Step link_faces done in 0.2 s
+2026-11-11 17:51:03,258 INFO    graph_topology: Step find_spaces started
+2026-11-11 17:51:03,261 INFO    find_spaces: Found 9 space candidates
+2026-11-11 17:51:03,262 INFO    graph_topology: Step find_spaces done in 0.0 s
+2026-11-11 17:51:03,262 INFO    graph_topology: Step boundaries started
+2026-11-11 17:51:03,262 INFO    space_boundaries: Built 163 boundaries
+2026-11-11 17:51:03,262 INFO    graph_topology: Step boundaries done in 0.0 s
+2026-11-11 17:51:03,262 INFO    graph_topology: Step write_ifc started
+2026-11-11 17:51:04,370 INFO    write_ifc: Wrote out/runs/2026-11-11_175101_duplex-a/duplex-a-graph-topology.ifc
+2026-11-11 17:51:04,379 INFO    graph_topology: Step write_ifc done in 1.1 s
+2026-11-11 17:51:04,381 INFO    graph_topology: Step compare_spaces started
+2026-11-11 17:51:04,454 INFO    graph_topology: Step compare_spaces done in 0.1 s
+2026-11-11 17:51:04,473 INFO    graph_topology: Report written to out/runs/2026-11-11_175101_duplex-a/report.md

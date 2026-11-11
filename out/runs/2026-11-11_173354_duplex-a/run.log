@@ -1,0 +1,32 @@
+2026-11-11 17:33:54,789 INFO    method_one: Run folder: out/runs/2026-11-11_173354_duplex-a
+2026-11-11 17:33:54,789 INFO    method_one: Step read_ifc started
+2026-11-11 17:33:55,541 WARNING read_elements: No geometry for IfcRoof 0jf0rYHfX3RAB3bSIRjmxl: No suitable IfcRepresentation found
+2026-11-11 17:33:55,935 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDocD
+2026-11-11 17:33:55,951 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDoy2
+2026-11-11 17:33:55,988 INFO    read_elements: Read geometry of 128 bounding elements, 2 had flipped normals
+2026-11-11 17:33:55,989 INFO    method_one: Step read_ifc done in 1.2 s
+2026-11-11 17:33:55,989 INFO    method_one: Schema IFC2X3, 128 bounding elements, 7032 triangles, 21 original IfcSpace
+2026-11-11 17:33:55,989 INFO    method_one: Step fuse started
+2026-11-11 17:33:55,989 INFO    method_one: Reusing fused faces from out/duplex_fused_v2.pkl
+2026-11-11 17:33:56,064 INFO    method_one: Step fuse done in 0.1 s
+2026-11-11 17:33:56,064 INFO    method_one: Step air_faces started
+2026-11-11 17:33:56,269 INFO    face_graph: 6346 faces face the air, 5276 were contact faces between two solids
+2026-11-11 17:33:56,269 INFO    method_one: Step air_faces done in 0.2 s
+2026-11-11 17:33:56,269 INFO    method_one: Step buried_faces started
+2026-11-11 17:33:56,577 INFO    buried_faces: Removed 2485 buried faces
+2026-11-11 17:33:56,578 INFO    method_one: Step buried_faces done in 0.3 s
+2026-11-11 17:33:56,578 INFO    method_one: Step link_faces started
+2026-11-11 17:33:57,002 INFO    face_graph: Found 15 groups of faces
+2026-11-11 17:33:57,010 INFO    method_one: Step link_faces done in 0.4 s
+2026-11-11 17:33:57,010 INFO    method_one: Step find_spaces started
+2026-11-11 17:33:57,017 INFO    find_spaces: Found 9 space candidates
+2026-11-11 17:33:57,017 INFO    method_one: Step find_spaces done in 0.0 s
+2026-11-11 17:33:57,017 INFO    method_one: Step boundaries started
+2026-11-11 17:33:57,019 INFO    space_boundaries: Built 163 boundaries
+2026-11-11 17:33:57,019 INFO    method_one: Step boundaries done in 0.0 s
+2026-11-11 17:33:57,019 INFO    method_one: Step write_ifc started
+2026-11-11 17:33:58,218 INFO    write_ifc: Wrote out/runs/2026-11-11_173354_duplex-a/duplex-a-method-one.ifc
+2026-11-11 17:33:58,231 INFO    method_one: Step write_ifc done in 1.2 s
+2026-11-11 17:33:58,233 INFO    method_one: Step compare_spaces started
+2026-11-11 17:33:58,308 INFO    method_one: Step compare_spaces done in 0.1 s
+2026-11-11 17:33:58,333 INFO    method_one: Report written to out/runs/2026-11-11_173354_duplex-a/report.md

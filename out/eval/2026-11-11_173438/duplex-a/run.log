@@ -1,0 +1,33 @@
+2026-11-11 17:34:39,585 INFO    method_one: Run folder: /home/hieuht50/IFC-to-Space-Boundaries/out/eval/2026-11-11_173438/duplex-a
+2026-11-11 17:34:39,585 INFO    method_one: Step read_ifc started
+2026-11-11 17:34:40,109 WARNING read_elements: No geometry for IfcRoof 0jf0rYHfX3RAB3bSIRjmxl: No suitable IfcRepresentation found
+2026-11-11 17:34:40,275 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDocD
+2026-11-11 17:34:40,285 WARNING read_elements: Flipped normals of IfcWindow 1Eo2$BaHX42AEkDvQQDoy2
+2026-11-11 17:34:40,311 INFO    read_elements: Read geometry of 128 bounding elements, 2 had flipped normals
+2026-11-11 17:34:40,311 INFO    method_one: Step read_ifc done in 0.7 s
+2026-11-11 17:34:40,311 INFO    method_one: Schema IFC2X3, 128 bounding elements, 7032 triangles, 21 original IfcSpace
+2026-11-11 17:34:40,311 INFO    method_one: Step fuse started
+2026-11-11 17:34:40,859 INFO    fuse_faces: Built 7032 source faces
+2026-11-11 17:38:18,753 INFO    fuse_faces: General Fuse produced 11622 faces
+2026-11-11 17:38:19,370 INFO    method_one: Step fuse done in 219.1 s
+2026-11-11 17:38:19,370 INFO    method_one: Step air_faces started
+2026-11-11 17:38:19,830 INFO    face_graph: 6346 faces face the air, 5276 were contact faces between two solids
+2026-11-11 17:38:19,830 INFO    method_one: Step air_faces done in 0.5 s
+2026-11-11 17:38:19,830 INFO    method_one: Step buried_faces started
+2026-11-11 17:38:20,169 INFO    buried_faces: Removed 2485 buried faces
+2026-11-11 17:38:20,170 INFO    method_one: Step buried_faces done in 0.3 s
+2026-11-11 17:38:20,170 INFO    method_one: Step link_faces started
+2026-11-11 17:38:20,403 INFO    face_graph: Found 15 groups of faces
+2026-11-11 17:38:20,407 INFO    method_one: Step link_faces done in 0.2 s
+2026-11-11 17:38:20,407 INFO    method_one: Step find_spaces started
+2026-11-11 17:38:20,410 INFO    find_spaces: Found 9 space candidates
+2026-11-11 17:38:20,410 INFO    method_one: Step find_spaces done in 0.0 s
+2026-11-11 17:38:20,410 INFO    method_one: Step boundaries started
+2026-11-11 17:38:20,410 INFO    space_boundaries: Built 163 boundaries
+2026-11-11 17:38:20,410 INFO    method_one: Step boundaries done in 0.0 s
+2026-11-11 17:38:20,410 INFO    method_one: Step write_ifc started
+2026-11-11 17:38:21,370 INFO    write_ifc: Wrote /home/hieuht50/IFC-to-Space-Boundaries/out/eval/2026-11-11_173438/duplex-a/duplex-a-method-one.ifc
+2026-11-11 17:38:21,379 INFO    method_one: Step write_ifc done in 1.0 s
+2026-11-11 17:38:21,381 INFO    method_one: Step compare_spaces started
+2026-11-11 17:38:21,459 INFO    method_one: Step compare_spaces done in 0.1 s
+2026-11-11 17:38:21,508 INFO    method_one: Report written to /home/hieuht50/IFC-to-Space-Boundaries/out/eval/2026-11-11_173438/duplex-a/report.md

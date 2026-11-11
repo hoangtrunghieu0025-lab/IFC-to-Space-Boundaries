@@ -1,0 +1,287 @@
+{
+  "ifc_path": "samples/small/duplex-a.ifc",
+  "output_path": "out/runs/2026-11-11_173354_duplex-a/duplex-a-method-one.ifc",
+  "started_at": "2026-11-11 17:33:54",
+  "schema": "IFC2X3",
+  "original_space_count": 21,
+  "timings": {
+    "read_ifc": 1.1991123269981472,
+    "fuse": 0.07487460099946475,
+    "air_faces": 0.2053569050040096,
+    "buried_faces": 0.3080909709970001,
+    "link_faces": 0.43239665900182445,
+    "find_spaces": 0.006938957994861994,
+    "boundaries": 0.0015830269985599443,
+    "write_ifc": 1.2120896329943207,
+    "compare_spaces": 0.07465169900387991
+  },
+  "counts": {
+    "bounding_elements": 128,
+    "triangles": 7032,
+    "fused_faces": 11622,
+    "air_faces": 6346,
+    "buried_faces_removed": 2485,
+    "face_groups": 15,
+    "rooms": 9,
+    "boundaries": 163,
+    "boundaries_external": 63,
+    "boundaries_internal": 100
+  },
+  "rooms": [
+    {
+      "name": "Space 01",
+      "volume_m3": 407.034,
+      "floor_height_m": 0.0,
+      "open_ratio": 0.0078,
+      "face_count": 1372
+    },
+    {
+      "name": "Space 02",
+      "volume_m3": 8.784,
+      "floor_height_m": 0.013,
+      "open_ratio": 0.0011,
+      "face_count": 40
+    },
+    {
+      "name": "Space 03",
+      "volume_m3": 8.785,
+      "floor_height_m": 0.013,
+      "open_ratio": 0.0012,
+      "face_count": 38
+    },
+    {
+      "name": "Space 04",
+      "volume_m3": 66.985,
+      "floor_height_m": 3.119,
+      "open_ratio": 0.0016,
+      "face_count": 250
+    },
+    {
+      "name": "Space 05",
+      "volume_m3": 42.23,
+      "floor_height_m": 3.119,
+      "open_ratio": 0.0242,
+      "face_count": 246
+    },
+    {
+      "name": "Space 06",
+      "volume_m3": 66.445,
+      "floor_height_m": 3.119,
+      "open_ratio": 0.0002,
+      "face_count": 211
+    },
+    {
+      "name": "Space 07",
+      "volume_m3": 41.691,
+      "floor_height_m": 3.119,
+      "open_ratio": 0.0264,
+      "face_count": 209
+    },
+    {
+      "name": "Space 08",
+      "volume_m3": 18.083,
+      "floor_height_m": 3.113,
+      "open_ratio": 0.014,
+      "face_count": 108
+    },
+    {
+      "name": "Space 09",
+      "volume_m3": 16.223,
+      "floor_height_m": 3.113,
+      "open_ratio": 0.0269,
+      "face_count": 103
+    }
+  ],
+  "comparison": {
+    "matched": [
+      {
+        "found": {
+          "name": "Space 04",
+          "volume_m3": 66.985,
+          "floor_height_m": 3.119,
+          "open_ratio": 0.0016,
+          "face_count": 250
+        },
+        "original": {
+          "name": "B201",
+          "volume_m3": 71.777,
+          "floor_height_m": 3.119
+        },
+        "volume_diff": 0.067
+      },
+      {
+        "found": {
+          "name": "Space 06",
+          "volume_m3": 66.445,
+          "floor_height_m": 3.119,
+          "open_ratio": 0.0002,
+          "face_count": 211
+        },
+        "original": {
+          "name": "A203",
+          "volume_m3": 56.894,
+          "floor_height_m": 3.119
+        },
+        "volume_diff": 0.168
+      },
+      {
+        "found": {
+          "name": "Space 03",
+          "volume_m3": 8.785,
+          "floor_height_m": 0.013,
+          "open_ratio": 0.0012,
+          "face_count": 38
+        },
+        "original": {
+          "name": "A104",
+          "volume_m3": 8.177,
+          "floor_height_m": 0.013
+        },
+        "volume_diff": 0.074
+      },
+      {
+        "found": {
+          "name": "Space 02",
+          "volume_m3": 8.784,
+          "floor_height_m": 0.013,
+          "open_ratio": 0.0011,
+          "face_count": 40
+        },
+        "original": {
+          "name": "B104",
+          "volume_m3": 8.177,
+          "floor_height_m": 0.013
+        },
+        "volume_diff": 0.074
+      }
+    ],
+    "unmatched_found": [
+      {
+        "name": "Space 01",
+        "volume_m3": 407.034,
+        "floor_height_m": 0.0,
+        "open_ratio": 0.0078,
+        "face_count": 1372
+      },
+      {
+        "name": "Space 05",
+        "volume_m3": 42.23,
+        "floor_height_m": 3.119,
+        "open_ratio": 0.0242,
+        "face_count": 246
+      },
+      {
+        "name": "Space 07",
+        "volume_m3": 41.691,
+        "floor_height_m": 3.119,
+        "open_ratio": 0.0264,
+        "face_count": 209
+      },
+      {
+        "name": "Space 08",
+        "volume_m3": 18.083,
+        "floor_height_m": 3.113,
+        "open_ratio": 0.014,
+        "face_count": 108
+      },
+      {
+        "name": "Space 09",
+        "volume_m3": 16.223,
+        "floor_height_m": 3.113,
+        "open_ratio": 0.0269,
+        "face_count": 103
+      }
+    ],
+    "unmatched_original": [
+      {
+        "name": "A102",
+        "volume_m3": 71.391,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "A103",
+        "volume_m3": 33.512,
+        "floor_height_m": 0.013
+      },
+      {
+        "name": "A101",
+        "volume_m3": 40.241,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "A201",
+        "volume_m3": 114.95,
+        "floor_height_m": 3.119
+      },
+      {
+        "name": "A204",
+        "volume_m3": 12.24,
+        "floor_height_m": 3.113
+      },
+      {
+        "name": "A202",
+        "volume_m3": 56.894,
+        "floor_height_m": 3.119
+      },
+      {
+        "name": "B102",
+        "volume_m3": 71.391,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "B103",
+        "volume_m3": 33.512,
+        "floor_height_m": 0.013
+      },
+      {
+        "name": "B101",
+        "volume_m3": 40.241,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "B204",
+        "volume_m3": 12.301,
+        "floor_height_m": 3.113
+      },
+      {
+        "name": "B203",
+        "volume_m3": 56.894,
+        "floor_height_m": 3.119
+      },
+      {
+        "name": "B202",
+        "volume_m3": 56.894,
+        "floor_height_m": 3.119
+      },
+      {
+        "name": "A205",
+        "volume_m3": 3.672,
+        "floor_height_m": 3.113
+      },
+      {
+        "name": "B205",
+        "volume_m3": 3.611,
+        "floor_height_m": 3.113
+      },
+      {
+        "name": "A105",
+        "volume_m3": 20.796,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "B105",
+        "volume_m3": 20.796,
+        "floor_height_m": 0.019
+      },
+      {
+        "name": "R301",
+        "volume_m3": 405.453,
+        "floor_height_m": 6.0
+      }
+    ],
+    "no_geometry": 0,
+    "tolerance": 0.2,
+    "floor_tolerance_m": 0.5
+  },
+  "peak_memory_mb": 402
+}
