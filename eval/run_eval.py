@@ -18,7 +18,7 @@ from string import Template
 # GIẢI THÍCH FILE: chạy hàng loạt các file IFC thử nghiệm và gom kết quả vào một bảng tổng
 #
 # 1. Ý CHÍNH
-# Pipeline (src/method_one/run_method_one.py) tự tạo báo cáo cho từng file. File này chỉ lo việc
+# Pipeline (src/brep_3d_reconstruction/run_brep_3d_reconstruction.py) tự tạo báo cáo cho từng file. File này chỉ lo việc
 # chạy nhiều file liên tiếp theo danh sách trong cases.json, rồi gom các kết quả riêng lẻ vào một
 # bảng tổng để so sánh các file với nhau.
 #
@@ -42,7 +42,7 @@ from string import Template
 
 EVAL_DIR = Path(__file__).resolve().parent
 REPO_ROOT = EVAL_DIR.parent
-PIPELINE_SCRIPT = REPO_ROOT / "src" / "method_one" / "run_method_one.py"
+PIPELINE_SCRIPT = REPO_ROOT / "src" / "brep_3d_reconstruction" / "run_brep_3d_reconstruction.py"
 RESULTS_ROOT = REPO_ROOT / "out" / "eval"
 SUMMARY_TEMPLATE = EVAL_DIR / "templates" / "summary.md"
 

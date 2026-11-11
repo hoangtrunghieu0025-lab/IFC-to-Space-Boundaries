@@ -334,7 +334,7 @@ def fuse_meshes(meshes: list[ElementMesh]) -> list[FusedFace]:
         meshes: danh sách ElementMesh của mọi phần tử bao (kết quả của read_element_meshes).
     Output:
         Danh sách FusedFace như collect_fused_faces. Chậm vì có bước fuse (vài phút với cả tòa nhà),
-        nên run_method_one.py cho phép lưu kết quả vào cache.
+        nên run_brep_3d_reconstruction.py cho phép lưu kết quả vào cache.
     """
     source_faces = make_source_faces(meshes)
     builder = fuse_source_faces(source_faces)

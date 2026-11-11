@@ -1,7 +1,7 @@
 """Space boundaries từ IFC bằng đồ thị kề mặt (hướng 1).
 
 Chạy từ thư mục gốc dự án:
-    .venv/bin/python src/method_one/run_method_one.py samples/small/duplex-a.ifc out/duplex-a-method-one.ifc
+    .venv/bin/python src/brep_3d_reconstruction/run_brep_3d_reconstruction.py samples/small/duplex-a.ifc out/duplex-a-brep-3d-reconstruction.ifc
 """
 import argparse
 import json
@@ -61,7 +61,7 @@ from write_ifc import write_result
 # =====================================================================
 
 
-logger = logging.getLogger("method_one")
+logger = logging.getLogger("brep_3d_reconstruction")
 
 
 def load_or_fuse(meshes, cache_path: Path | None) -> list[FusedFace]:
@@ -353,7 +353,7 @@ def main() -> int:
     setup_logging(arguments.verbose, arguments.quiet, run_dir / "run.log")
 
     stem = Path(arguments.ifc_path).stem.replace(" ", "-")
-    output_path = arguments.output_path or str(run_dir / f"{stem}-method-one.ifc")
+    output_path = arguments.output_path or str(run_dir / f"{stem}-brep-3d-reconstruction.ifc")
     logger.info("Run folder: %s", run_dir)
 
     try:

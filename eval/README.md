@@ -1,7 +1,7 @@
 # eval: chạy hàng loạt file IFC thử nghiệm
 
-Mỗi lần chạy pipeline hướng 1 (`src/method_one/run_method_one.py`) tự tạo một thư mục chạy gồm
-`run.log`, `result.json` và `report.md` (sinh từ `src/method_one/templates/report.md`). Thư mục này
+Mỗi lần chạy pipeline hướng 1 (`src/brep_3d_reconstruction/run_brep_3d_reconstruction.py`) tự tạo một thư mục chạy gồm
+`run.log`, `result.json` và `report.md` (sinh từ `src/brep_3d_reconstruction/templates/report.md`). Thư mục này
 chỉ lo việc chạy nhiều file liên tiếp rồi gom một bảng tổng.
 
 ## Chạy

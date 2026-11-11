@@ -1,5 +1,5 @@
-out/*
-!out/.gitkeep
+# mọi file IFC đều không commit
+*.ifc
 __pycache__/
 *.pyc
 .venv/
